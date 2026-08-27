@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="150" viewBox="0 0 1200 300" role="img" aria-labelledby="title description">
+  <title id="title">Процесс проектной работы</title>
+  <desc id="description">Пять этапов: идея, регистрация, минимальная версия, итерации и защита.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+    <style>
+      .box { fill: #f8fafc; stroke: #334155; stroke-width: 2; }
+      .number { fill: #2563eb; }
+      .number-text { fill: white; font: 700 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-anchor: middle; }
+      .heading { fill: #0f172a; font: 700 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-anchor: middle; }
+      .caption { fill: #475569; font: 17px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-anchor: middle; }
+      .arrow { stroke: #64748b; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="300" rx="20" fill="#ffffff"/>
+
+  <line class="arrow" x1="220" y1="150" x2="260" y2="150"/>
+  <line class="arrow" x1="460" y1="150" x2="500" y2="150"/>
+  <line class="arrow" x1="700" y1="150" x2="740" y2="150"/>
+  <line class="arrow" x1="940" y1="150" x2="980" y2="150"/>
+
+  <g transform="translate(20 55)">
+    <rect class="box" width="200" height="190" rx="16"/>
+    <circle class="number" cx="100" cy="42" r="24"/>
+    <text class="number-text" x="100" y="50">1</text>
+    <text class="heading" x="100" y="93">Идея</text>
+    <text class="caption" x="100" y="128">Пользователь</text>
+    <text class="caption" x="100" y="154">и проблема</text>
+  </g>
+
+  <g transform="translate(260 55)">
+    <rect class="box" width="200" height="190" rx="16"/>
+    <circle class="number" cx="100" cy="42" r="24"/>
+    <text class="number-text" x="100" y="50">2</text>
+    <text class="heading" x="100" y="93">Регистрация</text>
+    <text class="caption" x="100" y="128">Команда, тема</text>
+    <text class="caption" x="100" y="154">и куратор</text>
+  </g>
+
+  <g transform="translate(500 55)">
+    <rect class="box" width="200" height="190" rx="16"/>
+    <circle class="number" cx="100" cy="42" r="24"/>
+    <text class="number-text" x="100" y="50">3</text>
+    <text class="heading" x="100" y="93">MVP</text>
+    <text class="caption" x="100" y="128">Один работающий</text>
+    <text class="caption" x="100" y="154">сценарий</text>
+  </g>
+
+  <g transform="translate(740 55)">
+    <rect class="box" width="200" height="190" rx="16"/>
+    <circle class="number" cx="100" cy="42" r="24"/>
+    <text class="number-text" x="100" y="50">4</text>
+    <text class="heading" x="100" y="93">Итерации</text>
+    <text class="caption" x="100" y="128">Обратная связь,</text>
+    <text class="caption" x="100" y="154">тесты и README</text>
+  </g>
+
+  <g transform="translate(980 55)">
+    <rect class="box" width="200" height="190" rx="16"/>
+    <circle class="number" cx="100" cy="42" r="24"/>
+    <text class="number-text" x="100" y="50">5</text>
+    <text class="heading" x="100" y="93">Защита</text>
+    <text class="caption" x="100" y="128">Демонстрация</text>
+    <text class="caption" x="100" y="154">и объяснение</text>
+  </g>
+</svg>

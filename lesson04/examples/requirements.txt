@@ -1,0 +1,5 @@
+fastapi>=0.115,<1
+pygame>=2.6,<3
+requests>=2,<3
+scikit-learn>=1.9,<2
+uvicorn>=0.30,<1
