@@ -54,7 +54,7 @@ def find_transaction(amounts: list[int], target: int) -> int:
 
 Ограничения:
 
-- Python 3.11 или новее;
+- Python 3.14;
 - у функции есть аннотации параметров и результата;
 - внешние зависимости не требуются;
 - предметная функция не знает о CLI и расположении файлов.
@@ -82,7 +82,7 @@ project/
     └── test_smoke.py
 ```
 
-В `pyproject.toml` укажите имя, версию `0.1.0`, `requires-python = ">=3.11"`, build backend и настройки Ruff. В `.gitignore` исключите `.venv/`, `__pycache__/`, `.pytest_cache/`, `.ruff_cache/` и служебные файлы редактора.
+В `pyproject.toml` укажите имя, версию `0.1.0`, `requires-python = ">=3.14"`, build backend и настройки Ruff. В `.gitignore` исключите `.venv/`, `__pycache__/`, `.pytest_cache/`, `.ruff_cache/` и служебные файлы редактора.
 
 Пример проверки после установки:
 

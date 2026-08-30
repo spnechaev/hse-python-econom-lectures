@@ -22,7 +22,6 @@ ALLOWED_TAGS = {
     "jupyter-only",
     "naive-solution",
     "network",
-    "requires-nb-mypy",
     "slow",
     "solution",
 }
@@ -98,7 +97,7 @@ def validate_notebook(path: Path, number: str, kind: str) -> list[str]:
                 "отсутствуют обязательные разделы лекции "
                 f"{sorted(missing_lecture_sections)}"
             )
-    if kind == "seminar" and "exercise" not in {
+    if kind == "seminar" and number != "14" and "exercise" not in {
         tag
         for cell in cells
         for tag in cell.get("metadata", {}).get("tags", [])
@@ -108,7 +107,7 @@ def validate_notebook(path: Path, number: str, kind: str) -> list[str]:
     return problems
 
 
-def validate_tasks(path: Path) -> list[str]:
+def validate_tasks(path: Path, *, homework_expected: bool = True) -> list[str]:
     try:
         text = path.read_text(encoding="utf-8")
     except OSError as error:
@@ -119,6 +118,10 @@ def validate_tasks(path: Path) -> list[str]:
         counts[level] += 1
 
     problems: list[str] = []
+    if not homework_expected:
+        if any(counts.values()):
+            problems.append("после последнего занятия домашняя работа не предусмотрена")
+        return problems
     if counts["Easy"] != 3:
         problems.append(f"ожидалось 3 задачи Easy, найдено {counts['Easy']}")
     if counts["Medium"] != 2:
@@ -151,7 +154,7 @@ def main() -> int:
                 print(f"{path.relative_to(ROOT)}: {problem}")
 
         tasks_path = directory / "tasks.md"
-        for problem in validate_tasks(tasks_path):
+        for problem in validate_tasks(tasks_path, homework_expected=number != "14"):
             failed = True
             print(f"{tasks_path.relative_to(ROOT)}: {problem}")
 

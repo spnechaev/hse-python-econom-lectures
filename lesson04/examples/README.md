@@ -3,7 +3,7 @@
 Каждый файл — самостоятельный запускаемый пример. Создайте отдельное окружение и установите зависимости:
 
 ```bash
-python3.11 -m venv .venv
+python3.14 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r lesson04/examples/requirements.txt
 ```
