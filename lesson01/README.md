@@ -3,6 +3,9 @@
 ## Материалы
 
 - [Лекция](lecture.ipynb)
+- [Комикс «Питон берётся за дело»](illustrations/lecture01-comic.png)
+- [Постер «Программа на Python»: основные конструкции](illustrations/lecture01-poster.png)
+- [Комикс «Дзен Питона»: две страницы с пояснениями](illustrations/zen-of-python-comic.md)
 - [Семинар](seminar.ipynb)
 - [Задачи для самостоятельного решения](tasks.md)
 
