@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Вспомним основы — квиз по Python</title>
+  <style>
+    :root {
+      --paper: #f6f5ef;
+      --white: #fffefa;
+      --ink: #202d29;
+      --muted: #606c66;
+      --line: #dcded5;
+      --green: #265d46;
+      --green-light: #eaf1e7;
+      --yellow: #efc660;
+      --red: #993f31;
+      --red-light: #fbede7;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    button:disabled { cursor: default; }
+    button, label { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid #aa7019; outline-offset: 5px; }
+    h1, h2, h3, p { margin: 0; }
+    code { font-family: var(--mono); }
+    .page { width: min(1140px, calc(100% - 80px)); margin: 0 auto; }
+    .masthead {
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 15px; }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: var(--yellow);
+      font: 700 17px var(--mono);
+      transform: rotate(-5deg);
+    }
+    .lesson-label { color: var(--muted); font-size: 13px; }
+    .lesson-label strong { color: var(--ink); font-weight: 600; }
+    .hero { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; padding: 42px 0 34px; }
+    .eyebrow { color: var(--green); font: 600 11px var(--mono); letter-spacing: .11em; text-transform: uppercase; }
+    h1 { margin-top: 13px; font-size: clamp(38px, 4.5vw, 60px); line-height: 1.05; letter-spacing: -.055em; font-weight: 750; }
+    .hero-copy { margin-top: 17px; color: var(--muted); font-size: 15px; line-height: 1.6; }
+    .quiz-facts { display: flex; gap: 28px; padding: 0 0 5px; flex-shrink: 0; }
+    .fact + .fact { border-left: 1px solid var(--line); padding-left: 28px; }
+    .fact strong { display: block; font: 400 29px var(--mono); letter-spacing: -.06em; }
+    .fact span { display: block; margin-top: 7px; color: var(--muted); font-size: 12px; }
+    .quiz-nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-bottom: 15px; }
+    .steps { display: flex; flex-wrap: wrap; gap: 8px; }
+    .step {
+      width: 46px;
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      background: transparent;
+      font: 500 12px var(--mono);
+    }
+    .step.answered { color: var(--green); background: var(--green-light); border-color: #b8c9b9; }
+    .step[aria-current="step"] { color: white; background: var(--ink); border-color: var(--ink); }
+    .progress-copy { color: var(--muted); font-size: 12px; }
+    .progress { height: 3px; background: var(--line); border-radius: 3px; overflow: hidden; margin-bottom: 22px; }
+    .progress-fill { height: 100%; background: var(--green); width: 0; transition: width .25s ease; }
+    .question-card { border: 1px solid var(--line); border-radius: 18px; background: var(--white); overflow: hidden; box-shadow: 0 10px 35px #243b2c05; }
+    .card-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 19px 28px; border-bottom: 1px solid var(--line); }
+    .question-number { color: var(--green); font: 600 11px var(--mono); letter-spacing: .09em; text-transform: uppercase; white-space: nowrap; }
+    .topic { color: var(--muted); font-size: 12px; }
+    .topic.hard { color: #805515; font-weight: 600; }
+    .question-body { display: grid; grid-template-columns: 1.05fr 1fr; }
+    .prompt { min-width: 0; padding: 27px 28px 30px; }
+    h2 { font-size: 25px; line-height: 1.25; letter-spacing: -.035em; }
+    h2:focus, h3:focus { outline: none; }
+    .prompt-note { color: var(--muted); font-size: 13px; line-height: 1.6; margin-top: 9px; }
+    .code-window { margin-top: 22px; border: 1px solid #263f35; border-radius: 12px; overflow: hidden; background: #20332b; color: #ecf0df; }
+    .code-bar { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #ffffff14; color: #b2c2b6; font: 11px var(--mono); }
+    .code-dots { display: flex; gap: 5px; }
+    .code-dots i { display: block; width: 6px; height: 6px; border-radius: 50%; background: #5e7668; }
+    .code-dots i:first-child { background: var(--yellow); }
+    pre { margin: 0; padding: 22px 20px 25px; overflow-x: auto; tab-size: 4; font: 14px/1.85 var(--mono); }
+    .tok-keyword { color: #e7be8d; }
+    .tok-string { color: #c6dfa1; }
+    .tok-number { color: #c7b9ea; }
+    .tok-builtin { color: #9fd4d0; }
+    .answers { margin: 0; min-width: 0; border: 0; padding: 28px; border-left: 1px solid var(--line); }
+    .answers legend { float: left; width: 100%; padding: 0; margin-bottom: 15px; color: var(--muted); font-size: 12px; }
+    .options { clear: both; display: grid; gap: 9px; }
+    .option { position: relative; display: flex; align-items: center; gap: 13px; min-height: 53px; border: 1px solid var(--line); border-radius: 9px; padding: 10px 14px; cursor: pointer; transition: background .15s, border-color .15s; }
+    .option:hover { background: #f5f6ef; border-color: #9aaa9d; }
+    .option:has(input:checked) { background: var(--green-light); border-color: var(--green); box-shadow: inset 0 0 0 1px var(--green); }
+    .option:has(input:focus-visible) { outline: 3px solid #aa7019; outline-offset: 3px; }
+    .option input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+    .option-letter { display: grid; place-items: center; flex: 0 0 27px; width: 27px; height: 27px; border-radius: 6px; background: #efefe7; color: var(--muted); font: 12px var(--mono); }
+    .option:has(input:checked) .option-letter { background: var(--green); color: white; }
+    .option-text { font: 13px/1.5 var(--mono); overflow-wrap: anywhere; }
+    .option-check { margin-left: auto; color: var(--green); visibility: hidden; font-weight: 700; }
+    .option:has(input:checked) .option-check { visibility: visible; }
+    .actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 22px; }
+    .button { min-height: 46px; padding: 12px 20px; border: 1px solid var(--line); border-radius: 9px; background: transparent; color: var(--ink); font-size: 13px; font-weight: 600; }
+    .button:hover:not(:disabled) { background: #e9ece3; }
+    .button.primary { color: white; background: var(--green); border-color: var(--green); }
+    .button.primary:hover:not(:disabled) { background: #1b4936; }
+    .button:disabled { color: #747a71; background: #e6e8df; border-color: #e6e8df; }
+    .button .arrow { margin-left: 18px; }
+    .action-hint { color: var(--muted); font-size: 12px; text-align: center; line-height: 1.5; }
+    .back { min-width: 100px; }
+    .back:disabled { opacity: .45; background: transparent; border-color: var(--line); }
+    .page-footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 32px; padding: 20px 0 26px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; line-height: 1.6; }
+    .page-footer code { font-size: 11px; }
+    .result-banner { display: flex; align-items: center; gap: 28px; padding: 30px; background: var(--green); color: white; border-radius: 16px; }
+    .result-score { display: flex; align-items: baseline; gap: 5px; flex-shrink: 0; font: 48px var(--mono); letter-spacing: -.06em; }
+    .result-score small { font-size: 24px; color: #c3d5c6; }
+    .result-banner h2 { margin-top: 8px; font-size: 27px; }
+    .result-banner .eyebrow { color: #d8e6c1; }
+    .result-message { margin-top: 10px; font-size: 14px; line-height: 1.6; color: #e3ece3; }
+    .review-list { display: grid; gap: 14px; margin-top: 22px; }
+    .review { padding: 24px 28px; background: var(--white); border: 1px solid var(--line); border-radius: 12px; }
+    .review-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .review h3 { font-size: 17px; line-height: 1.4; letter-spacing: -.02em; }
+    .badge { flex-shrink: 0; background: var(--green-light); color: var(--green); padding: 5px 9px; border-radius: 5px; font-size: 11px; font-weight: 600; }
+    .badge.incorrect { background: var(--red-light); color: var(--red); }
+    .review-answer { margin-top: 16px; font-size: 13px; line-height: 1.65; color: var(--muted); }
+    .review-answer code { padding: 3px 6px; border-radius: 4px; background: #f1f2ea; color: var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; }
+    .explanation { font-size: 14px; line-height: 1.7; margin-top: 12px; }
+    .review details { margin-top: 14px; }
+    .review summary { width: fit-content; cursor: pointer; font-size: 12px; color: var(--green); }
+    .review pre { margin-top: 10px; padding: 16px; background: #f0f1e9; border-radius: 8px; font-size: 12px; line-height: 1.65; }
+    noscript p { margin: 20px 0; padding: 20px; border: 1px solid var(--red); border-radius: 12px; }
+    @media (min-width: 1500px) { .hero { padding-top: 64px; padding-bottom: 45px; } }
+    @media (min-width: 851px) and (max-height: 950px) {
+      .masthead { min-height: 66px; }
+      .hero { padding: 22px 0; }
+      h1 { margin-top: 10px; font-size: 44px; }
+      .hero-copy { margin-top: 12px; font-size: 14px; line-height: 1.5; }
+      .quiz-nav { padding-bottom: 10px; }
+      .progress { margin-bottom: 14px; }
+      .card-heading { padding: 14px 24px; }
+      .prompt { padding: 22px 24px; }
+      .code-window { margin-top: 16px; }
+      pre { padding: 18px; font-size: 13px; line-height: 1.65; }
+      .answers { padding: 22px 24px; }
+      .answers legend { margin-bottom: 12px; }
+      .options { gap: 8px; }
+      .option { min-height: 46px; padding: 8px 12px; }
+      .actions { margin-top: 18px; }
+    }
+    @media (max-width: 850px) {
+      .page { width: min(720px, calc(100% - 40px)); }
+      .hero { align-items: flex-start; padding: 30px 0; }
+      .quiz-facts { gap: 18px; padding-top: 25px; }
+      .fact + .fact { padding-left: 18px; }
+      .question-body { grid-template-columns: 1fr; }
+      .answers { border-left: 0; border-top: 1px solid var(--line); padding-top: 22px; }
+      .prompt { padding-bottom: 25px; }
+      pre { font-size: 14px; }
+    }
+    @media (max-width: 520px) {
+      .page { width: calc(100% - 32px); }
+      .masthead { min-height: 76px; gap: 12px; }
+      .brand { font-size: 13px; gap: 9px; }
+      .brand-mark { width: 32px; height: 32px; font-size: 15px; }
+      .lesson-label { font-size: 11px; }
+      .lesson-label span { display: none; }
+      .hero { display: block; padding: 28px 0; }
+      h1 { font-size: 42px; }
+      .hero-copy { font-size: 14px; max-width: 310px; }
+      .quiz-facts { padding-top: 22px; gap: 24px; }
+      .fact { display: flex; align-items: baseline; gap: 8px; }
+      .fact strong { font-size: 20px; }
+      .fact span { margin: 0; font-size: 11px; }
+      .fact + .fact { padding-left: 24px; }
+      .quiz-nav { flex-wrap: wrap; gap: 12px; }
+      .progress-copy { margin-left: auto; }
+      .card-heading { padding: 17px 18px; gap: 10px; }
+      .topic { font-size: 11px; text-align: right; }
+      .prompt, .answers { padding: 22px 18px; }
+      h2 { font-size: 23px; }
+      pre { padding: 18px 14px; font-size: 12px; }
+      .option { padding: 10px 11px; gap: 10px; }
+      .option-text { font-size: 12px; }
+      .actions { flex-wrap: wrap; gap: 12px; }
+      .action-hint { order: 3; width: 100%; }
+      .button { padding: 12px 15px; }
+      .page-footer { margin-top: 24px; font-size: 10px; }
+      .page-footer code { display: none; }
+      .result-banner { gap: 18px; padding: 24px 20px; align-items: flex-start; }
+      .result-score { font-size: 38px; }
+      .result-banner h2 { font-size: 23px; }
+      .review { padding: 20px; }
+      .review-header { align-items: flex-start; }
+      .review h3 { font-size: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">py</span>Углублённый Python</div>
+      <div class="lesson-label"><span>Начинаем </span><strong>лекцию 03</strong></div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div>
+          <p class="eyebrow">Квиз · лекции 01–02</p>
+          <h1>Вспомним основы<span style="color: var(--green)">.</span></h1>
+          <p class="hero-copy">Прочитайте код. Предскажите результат.<br>В каждом вопросе — один верный ответ.</p>
+        </div>
+        <div class="quiz-facts" id="quiz-facts" aria-label="7 вопросов, в каждом 5 вариантов ответа">
+          <div class="fact"><strong id="question-count">07</strong><span>вопросов</span></div>
+          <div class="fact"><strong>05</strong><span>вариантов</span></div>
+        </div>
+      </div>
+
+      <noscript><p>Для работы квиза включите JavaScript в браузере. Интернет не нужен.</p></noscript>
+
+      <section id="quiz" aria-label="Вопросы квиза" hidden>
+        <div class="quiz-nav">
+          <nav class="steps" id="steps" aria-label="Перейти к вопросу"></nav>
+          <p class="progress-copy" id="progress-copy" role="status" aria-live="polite"></p>
+        </div>
+        <div class="progress" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+
+        <article class="question-card">
+          <div class="card-heading">
+            <span class="question-number" id="question-number"></span>
+            <span class="topic" id="topic"></span>
+          </div>
+          <div class="question-body">
+            <div class="prompt">
+              <h2 id="question-title" tabindex="-1">Что выведет код?</h2>
+              <p class="prompt-note">Попробуйте ответить без запуска Python.</p>
+              <div class="code-window">
+                <div class="code-bar"><span>Python 3</span><span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+                <pre tabindex="0" aria-label="Код вопроса"><code id="question-code"></code></pre>
+              </div>
+            </div>
+            <fieldset class="answers" aria-describedby="question-title">
+              <legend>Выберите один вариант</legend>
+              <div class="options" id="options"></div>
+            </fieldset>
+          </div>
+        </article>
+
+        <div class="actions">
+          <button type="button" class="button back" id="back">← Назад</button>
+          <p class="action-hint" id="action-hint">Разбор откроется после всех ответов.</p>
+          <button type="button" class="button primary" id="next"></button>
+        </div>
+      </section>
+
+      <section id="results" aria-label="Результаты квиза" hidden>
+        <div class="result-banner">
+          <div class="result-score"><span id="score"></span><small id="score-total">/ 7</small></div>
+          <div>
+            <p class="eyebrow">Квиз завершён</p>
+            <h2 id="result-title" tabindex="-1"></h2>
+            <p class="result-message" id="result-message"></p>
+          </div>
+        </div>
+        <div class="review-list" id="review-list"></div>
+        <div class="actions">
+          <p class="action-hint">Можно пройти ещё раз и закрепить результат.</p>
+          <button type="button" class="button primary" id="restart">Пройти заново <span class="arrow" aria-hidden="true">↻</span></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <span>Сначала подумайте — потом проверьте.</span>
+      <code>Python / разминка перед лекцией 03</code>
+    </footer>
+  </div>
+
+  <script>
+    "use strict";
+
+    // Все материалы находятся в этом файле; сервер и внешние библиотеки не нужны.
+    // correct — индекс верного варианта, начиная с нуля.
+    const questions = [
+      {
+        topic: "Лекция 01 · Циклы и условия",
+        reviewTitle: "Цикл с continue",
+        code: `total = 0
+for number in range(1, 6):
+    if number % 2 == 0:
+        continue
+    total += number
+print(total)`,
+        options: ["6", "9", "15", "12", "Код вызовет ошибку"],
+        correct: 1,
+        explanation: "range(1, 6) даёт числа от 1 до 5. Для чётных чисел continue пропускает оставшуюся часть итерации, поэтому к total прибавляются только 1, 3 и 5. Их сумма — 9."
+      },
+      {
+        topic: "Лекция 02 · Строки и списки",
+        reviewTitle: "Что изменилось после вызова метода",
+        code: `text = "кот"
+words = [text, "дом"]
+text.upper()
+words.append("лес")
+print(text, len(words))`,
+        options: ["КОТ 3", "кот 2", "КОТ 2", "кот 3", "Код вызовет TypeError"],
+        correct: 3,
+        explanation: "upper() возвращает строку «КОТ», но результат здесь не сохранён. Исходная строка не меняется: text по-прежнему содержит «кот». Метод append() меняет список words, добавляя третий элемент. Поэтому print выводит кот 3."
+      },
+      {
+        topic: "Лекция 02 · Словари",
+        reviewTitle: "Значение по умолчанию и поиск ключа",
+        code: `stock = {"ручка": 7, "тетрадь": 0}
+count = stock.get("ластик", 0)
+print(count, "ластик" in stock,
+      7 in stock)`,
+        options: ["0 False True", "0 True False", "0 False False", "None False False", "Код вызовет KeyError"],
+        correct: 2,
+        explanation: "Ключа «ластик» нет, поэтому get возвращает запасное значение 0, но не добавляет ключ в словарь. Оператор in у словаря проверяет ключи: ни «ластик», ни число 7 среди них не встречаются. Чтобы искать 7 среди значений, нужно написать 7 in stock.values()."
+      },
+      {
+        topic: "Логика и списки",
+        hard: true,
+        reviewTitle: "Хардкор: цепочка or с изменением списка",
+        code: `values = [0, 1, 2]
+result = (values.append(3)
+          or values.pop(0)
+          or values.pop())
+print(values, result)`,
+        options: ["[1, 2] 3", "[1, 2] True", "[1, 2, 3] 0", "[0, 1, 2, 3] None", "[0, 1, 2] 3"],
+        correct: 0,
+        explanation: "or возвращает один из операндов, а не обязательно True или False. Сначала append(3) меняет список на [0, 1, 2, 3] и возвращает None. Это ложное значение, поэтому вычисляется pop(0): он удаляет первый элемент и возвращает 0. Ноль тоже ложен, поэтому выполняется последний pop(): он удаляет и возвращает 3. Именно 3 попадает в result, а в списке остаются [1, 2]. Изменения списка не отменяются, когда or переходит к следующему операнду."
+      },
+      {
+        topic: "Ключи словаря",
+        hard: true,
+        reviewTitle: "Хардкор: сколько на самом деле разных ключей",
+        code: `keys = [True, 1, 1.0, False, 0, "0"]
+counts = {}
+for key in keys:
+    counts[key] = counts.get(key, 0) + 1
+print(len(counts), list(counts.values()))`,
+        options: ["6 [1, 1, 1, 1, 1, 1]", "4 [1, 2, 2, 1]", "2 [3, 3]", "3 [1, 1, 1]", "3 [3, 2, 1]"],
+        correct: 4,
+        explanation: "True, 1 и 1.0 равны при сравнении и обозначают один ключ словаря: его счётчик последовательно становится 1, 2 и 3. False и 0 тоже обозначают один ключ, поэтому его счётчик становится 2. Строка «0» не равна числу 0 и создаёт третий ключ со счётчиком 1. Обновление значения не меняет позицию ключа; values() идёт в порядке добавления ключей. Поэтому в словаре три записи, а список значений — [3, 2, 1]."
+      },
+      {
+        topic: "Цикл и меняющийся список",
+        hard: true,
+        reviewTitle: "Хардкор: список меняется во время обхода",
+        code: `values = [1, 2, 3]
+for value in values:
+    if value < 3:
+        values.remove(value)
+        values.append(value + 3)
+print(values, value)`,
+        options: ["[3, 4, 5] 3", "[3, 4, 5] 5", "[2, 3, 4] 4", "[2, 3, 4] 3", "Код вызовет RuntimeError"],
+        correct: 2,
+        // https://docs.python.org/3.14/library/stdtypes.html#common-sequence-operations
+        explanation: "Обход списка идёт по индексам, а копия списка заранее не создаётся. На индексе 0 цикл берёт 1: remove удаляет её, а append добавляет 4. Список становится [2, 3, 4]. Следующий индекс — 1: там теперь 3, поэтому сдвинувшаяся в начало двойка пропускается. На индексе 2 цикл берёт добавленную четвёрку. Для 3 и 4 условие ложно, больше список не меняется. Итог — [2, 3, 4], а в переменной value после цикла остаётся 4. Изменение длины списка во время обхода само по себе не вызывает RuntimeError."
+      },
+      {
+        topic: "NaN в ключах словаря",
+        hard: true,
+        reviewTitle: "Хардкор: несколько NaN в одном словаре",
+        code: `a = float("nan")
+b = float("nan")
+data = {a: 1, b: 2, a: 3}
+print(len(data), a == a,
+      data[a], data.get(float("nan"), 0))`,
+        options: ["1 False 3 3", "2 True 3 0", "3 False 3 0", "2 False 3 0", "Код вызовет KeyError"],
+        correct: 3,
+        // https://docs.python.org/3.14/reference/expressions.html#value-comparisons
+        explanation: "float('nan') создаёт значение NaN — «не число». При сравнении через == оно не равно даже самому себе, поэтому a == a даёт False. В a и b здесь находятся разные объекты NaN: они не равны друг другу и могут одновременно быть ключами словаря. Однако повторный ключ a — тот же самый объект. Словарь распознаёт его по идентичности и заменяет значение 1 на 3, поэтому записей остаётся две, а data[a] возвращает 3. Последний float('nan') создаёт ещё один объект, не совпадающий с сохранёнными ключами и не равный им. Метод get возвращает запасное значение 0."
+      }
+    ];
+
+    const letters = ["A", "B", "C", "D", "E"];
+    const answers = Array(questions.length).fill(null);
+    let current = 0;
+    let finished = false;
+    const byId = (id) => document.getElementById(id);
+    byId("question-count").textContent = String(questions.length).padStart(2, "0");
+    byId("quiz-facts").setAttribute("aria-label", `${questions.length} вопросов, в каждом 5 вариантов ответа`);
+    byId("score-total").textContent = `/ ${questions.length}`;
+
+    // Подсветка только для небольших примеров квиза; текст вставляется через textContent.
+    function renderCode(target, source) {
+      const tokens = /("[^"\n]*")|\b(\d+(?:\.\d+)?)\b|\b(for|in|if|continue|or|True|False|None)\b|\b(print|range|len|list|float)\b/g;
+      let end = 0;
+      target.replaceChildren();
+      for (const match of source.matchAll(tokens)) {
+        target.append(document.createTextNode(source.slice(end, match.index)));
+        const token = document.createElement("span");
+        token.className = match[1] ? "tok-string" : match[2] ? "tok-number" : match[3] ? "tok-keyword" : "tok-builtin";
+        token.textContent = match[0];
+        target.append(token);
+        end = match.index + match[0].length;
+      }
+      target.append(document.createTextNode(source.slice(end)));
+    }
+
+    function updateControls() {
+      const count = answers.filter((answer) => answer !== null).length;
+      byId("progress-copy").textContent = `Ответов: ${count} из ${questions.length}`;
+      byId("progress-fill").style.width = `${count / questions.length * 100}%`;
+      for (const [index, step] of [...byId("steps").children].entries()) {
+        step.classList.toggle("answered", answers[index] !== null);
+        step.setAttribute("aria-label", `Вопрос ${index + 1}${answers[index] !== null ? ", ответ выбран" : ""}`);
+        if (index === current) step.setAttribute("aria-current", "step");
+        else step.removeAttribute("aria-current");
+      }
+      byId("back").disabled = current === 0;
+      const last = current === questions.length - 1;
+      const complete = count === questions.length;
+      byId("next").textContent = last ? (complete ? "Проверить ответы →" : "К пропущенному →") : "Дальше →";
+      byId("next").disabled = answers[current] === null;
+      byId("action-hint").textContent = last && !complete
+        ? "Для проверки ответьте на все вопросы."
+        : "До проверки можно изменить любой ответ.";
+    }
+
+    function showQuestion(index, moveFocus = true) {
+      current = index;
+      const question = questions[index];
+      byId("question-number").textContent = `Вопрос ${String(index + 1).padStart(2, "0")} / ${String(questions.length).padStart(2, "0")}`;
+      byId("topic").textContent = `${question.hard ? "Хардкор · " : ""}${question.topic}`;
+      byId("topic").classList.toggle("hard", Boolean(question.hard));
+      renderCode(byId("question-code"), question.code);
+      byId("options").replaceChildren();
+      question.options.forEach((option, optionIndex) => {
+        const label = document.createElement("label");
+        label.className = "option";
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "answer";
+        input.value = optionIndex;
+        input.checked = answers[index] === optionIndex;
+        input.addEventListener("change", () => {
+          answers[index] = optionIndex;
+          updateControls();
+        });
+        const letter = document.createElement("span");
+        letter.className = "option-letter";
+        letter.textContent = letters[optionIndex];
+        letter.setAttribute("aria-hidden", "true");
+        const text = document.createElement("span");
+        text.className = "option-text";
+        text.textContent = option;
+        const check = document.createElement("span");
+        check.className = "option-check";
+        check.textContent = "✓";
+        check.setAttribute("aria-hidden", "true");
+        label.append(input, letter, text, check);
+        byId("options").append(label);
+      });
+      updateControls();
+      if (moveFocus) byId("question-title").focus();
+    }
+
+    function showResults() {
+      if (finished || answers.some((answer) => answer === null)) return;
+      finished = true;
+      const score = questions.reduce((total, question, index) => total + Number(answers[index] === question.correct), 0);
+      const perfect = score === questions.length;
+      byId("score").textContent = score;
+      byId("result-title").textContent = perfect ? "Все ответы верны!"
+        : score === 0 ? "Есть что повторить"
+        : score === questions.length - 1 ? "Почти всё верно" : "Продолжаем разбираться";
+      byId("result-message").textContent = `Верных ответов: ${score} из ${questions.length}. ` + (perfect
+        ? "Даже хардкор позади. Можно переходить к алгоритмам."
+        : "Ниже — разбор каждого примера. Посмотрите, на каком шаге результат оказался неожиданным.");
+      byId("review-list").replaceChildren();
+      questions.forEach((question, index) => {
+        const correct = answers[index] === question.correct;
+        const card = document.createElement("article");
+        card.className = "review";
+        const header = document.createElement("div");
+        header.className = "review-header";
+        const title = document.createElement("h3");
+        title.textContent = `${String(index + 1).padStart(2, "0")}. ${question.reviewTitle}`;
+        const badge = document.createElement("span");
+        badge.className = correct ? "badge" : "badge incorrect";
+        badge.textContent = correct ? "Верно" : "Неверно";
+        header.append(title, badge);
+        const answer = document.createElement("p");
+        answer.className = "review-answer";
+        const selected = document.createElement("code");
+        selected.textContent = question.options[answers[index]];
+        answer.append("Ваш ответ: ", selected);
+        if (!correct) {
+          const expected = document.createElement("code");
+          expected.textContent = question.options[question.correct];
+          answer.append(document.createElement("br"), "Верный ответ: ", expected);
+        }
+        const explanation = document.createElement("p");
+        explanation.className = "explanation";
+        explanation.textContent = question.explanation;
+        const details = document.createElement("details");
+        const summary = document.createElement("summary");
+        summary.textContent = "Посмотреть код вопроса";
+        const pre = document.createElement("pre");
+        const code = document.createElement("code");
+        code.textContent = question.code;
+        pre.append(code);
+        details.append(summary, pre);
+        card.append(header, answer, explanation, details);
+        byId("review-list").append(card);
+      });
+      byId("quiz").hidden = true;
+      byId("results").hidden = false;
+      byId("result-title").focus();
+    }
+
+    questions.forEach((question, index) => {
+      const step = document.createElement("button");
+      step.type = "button";
+      step.className = "step";
+      step.textContent = String(index + 1).padStart(2, "0");
+      step.addEventListener("click", () => showQuestion(index));
+      byId("steps").append(step);
+    });
+
+    byId("back").addEventListener("click", () => {
+      if (current > 0) showQuestion(current - 1);
+    });
+    byId("next").addEventListener("click", () => {
+      if (current < questions.length - 1) showQuestion(current + 1);
+      else {
+        const unanswered = answers.indexOf(null);
+        if (unanswered !== -1) showQuestion(unanswered);
+        else showResults();
+      }
+    });
+    byId("restart").addEventListener("click", () => {
+      answers.fill(null);
+      finished = false;
+      byId("results").hidden = true;
+      byId("quiz").hidden = false;
+      byId("review-list").replaceChildren();
+      showQuestion(0);
+    });
+
+    showQuestion(0, false);
+    byId("quiz").hidden = false;
+  </script>
+</body>
+</html>
