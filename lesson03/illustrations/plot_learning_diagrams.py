@@ -224,7 +224,7 @@ def binary_search_idea():
     text(ax, 346, 341, "Здесь все числа ≤ 12 < 16", size=15, weight="bold", color=MUTED, ha="center")
     text(ax, 346, 378, "Исключаем всю эту часть, включая середину.", size=11.5, ha="center")
     text(ax, 752, 341, "Здесь ещё может быть 16", size=15, weight="bold", color=BLUE, ha="center")
-    text(ax, 752, 378, "Остаётся проверить 3 элемента из 7.", size=11.5, ha="center")
+    text(ax, 752, 378, "Остаются 3 кандидата из 7.", size=11.5, ha="center")
 
     text(ax, 44, 445, "Три возможных результата сравнения", size=16, weight="bold")
     rules = [
