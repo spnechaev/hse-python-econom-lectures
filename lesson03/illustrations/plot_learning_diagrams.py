@@ -1,4 +1,4 @@
-"""Построить пять схем для лекции 3.
+"""Построить шесть схем для лекции 3.
 
 Запуск: python plot_learning_diagrams.py (нужен matplotlib).
 Для просмотра готовых PNG в ноутбуке matplotlib не требуется.
@@ -147,6 +147,50 @@ def loop_work():
         size=12,
     )
     save(fig, "loop-work.png")
+
+
+def loop_triangle():
+    source = (
+        "count = 0\n"
+        "for i in range(n):\n"
+        "    for j in range(i + 1, n):\n"
+        "        count += 1"
+    )
+    namespace = {"n": 4}
+    exec(source, namespace)
+    assert namespace["count"] == 6
+
+    fig, ax = canvas(
+        670,
+        "Внутренний цикл становится короче",
+        "n = 4. Цветная клетка — одно выполнение count += 1 для пары индексов (i, j).",
+    )
+    box(ax, 44, 126, 466, 365)
+    text(ax, 66, 148, "Код", size=16, weight="bold", color=BLUE)
+    box(ax, 62, 200, 430, 158, fill=BLUE_LIGHT, edge=BLUE_LIGHT, radius=6)
+    text(
+        ax, 80, 225, source, size=12, family="DejaVu Sans Mono",
+        linespacing=1.6,
+    )
+    text(ax, 66, 390, "i = 0: j = 1, 2, 3\ni = 1: j = 2, 3\ni = 2: j = 3\ni = 3: пустой диапазон", size=12, linespacing=1.4)
+
+    box(ax, 530, 126, 466, 365)
+    text(ax, 552, 148, "Посещаем только клетки с j > i", size=15, weight="bold", color=AMBER)
+    for j in range(4):
+        text(ax, 657 + j * 56, 204, f"j = {j}", size=11, ha="center", color=MUTED)
+    text(ax, 948, 204, "действий", size=10, ha="center", color=MUTED)
+    for i in range(4):
+        y = 238 + i * 55
+        text(ax, 582, y + 12, f"i = {i}", size=12, color=MUTED)
+        for j in range(4):
+            tile(ax, 635 + j * 56, y, 44, AMBER if j > i else GRAY)
+        text(ax, 948, y + 8, str(3 - i), size=19, weight="bold", ha="center", color=AMBER)
+    text(ax, 552, 465, "Серые клетки код не посещает.", size=11, color=MUTED)
+
+    text(ax, 44, 525, "3 + 2 + 1 + 0 = 6 действий", size=21, weight="bold", color=AMBER)
+    text(ax, 44, 574, "Для любого n: (n − 1) + (n − 2) + … + 1 = n(n − 1) / 2.", size=15)
+    text(ax, 44, 624, "Два вложенных цикла требуют подсчёта: здесь не n² действий, а половина n(n − 1).", size=12)
+    save(fig, "loop-triangle.png")
 
 
 def growth_doubling():
@@ -360,6 +404,7 @@ def memory_accounting():
 
 if __name__ == "__main__":
     loop_work()
+    loop_triangle()
     growth_doubling()
     binary_search_idea()
     binary_search_steps()
