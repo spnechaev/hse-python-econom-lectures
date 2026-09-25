@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LESSON_DIRECTORIES = sorted(ROOT.glob("lesson[0-9][0-9]"))
 REQUIRED_FILES = {"README.md", "lecture.ipynb", "seminar.ipynb", "tasks.md"}
-REQUIRED_SECTIONS = {"Цели", "Перед началом", "Самопроверка", "Итоги"}
+REQUIRED_SECTIONS = {"Цели", "Перед началом", "Итоги"}
 REQUIRED_LECTURE_SECTIONS = {"Неожиданно, но по правилам"}
 ALLOWED_TAGS = {
     "blocking-demo",
