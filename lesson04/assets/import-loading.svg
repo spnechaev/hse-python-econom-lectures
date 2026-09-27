@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img">
+<title>Что происходит при import greetings</title><desc>Обычный импорт собственного .py-модуля; кеш sys.modules живёт внутри интерпретатора.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif;fill:#203047}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="620" rx="20" fill="#f5f7fb"/>
+<rect x="32" y="31" width="7" height="62" rx="3" fill="#2764b7"/>
+<text x="58" y="57" font-size="30" font-weight="700" style="fill:#203047">Что происходит при import greetings</text>
+<text x="58" y="91" font-size="19" font-weight="400" style="fill:#203047">Обычный импорт собственного .py-модуля; кеш sys.modules живёт внутри интерпретатора.</text>
+<rect x="40" y="148" width="285" height="135" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="58" y="181" font-size="23" font-weight="700" style="fill:#2764b7">1. Проверить кеш</text>
+<text x="58" y="215" font-size="20" font-weight="400" style="fill:#203047">sys.modules</text>
+<text x="58" y="244" font-size="20" font-weight="400" style="fill:#203047">имя &quot;greetings&quot;</text>
+<rect x="465" y="148" width="285" height="135" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="483" y="181" font-size="23" font-weight="700" style="fill:#2764b7">2. Найти модуль</text>
+<text x="483" y="215" font-size="20" font-weight="400" style="fill:#203047">каталоги из sys.path</text>
+<text x="483" y="244" font-size="20" font-weight="400" style="fill:#203047">файл greetings.py</text>
+<rect x="880" y="148" width="280" height="135" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="898" y="181" font-size="23" font-weight="700" style="fill:#2764b7">3. Создать модуль</text>
+<text x="898" y="215" font-size="20" font-weight="400" style="fill:#203047">своё пространство имён</text>
+<text x="898" y="244" font-size="20" font-weight="400" style="fill:#203047">добавить в кеш</text>
+<polyline points="325,215 465,215" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="340" y="192" font-size="18" font-weight="400" style="fill:#197568">нет в кеше</text>
+<polyline points="750,215 880,215" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="880" y="378" width="280" height="135" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="898" y="411" font-size="23" font-weight="700" style="fill:#2764b7">4. Выполнить код</text>
+<text x="898" y="445" font-size="20" font-weight="400" style="fill:#203047">сверху вниз</text>
+<text x="898" y="474" font-size="20" font-weight="400" style="fill:#203047">создать greet и PREFIX</text>
+<rect x="40" y="378" width="585" height="135" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="58" y="411" font-size="23" font-weight="700" style="fill:#2764b7">5. Связать имя greetings с модулем</text>
+<text x="58" y="445" font-size="20" font-weight="400" style="fill:#203047">теперь доступно greetings.greet(&#x27;Маша&#x27;)</text>
+<text x="58" y="474" font-size="20" font-weight="400" style="fill:#203047">повторный импорт использует этот же объект</text>
+<polyline points="1020,283 1020,378" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="880,446 625,446" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="756" y="425" font-size="18" font-weight="400" style="fill:#197568">успех</text>
+<polyline points="182,283 182,378" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="200" y="338" font-size="18" font-weight="400" style="fill:#197568">уже в кеше</text>
+<text x="40" y="562" font-size="21" font-weight="400" style="fill:#203047">При ошибке загрузки импорт завершается исключением; новая запись модуля удаляется из кеша.</text>
+<text x="40" y="595" font-size="19" font-weight="400" style="fill:#197568">Встроенные модули и расширения загружаются иначе, но их имена тоже попадают в sys.modules.</text>
+</svg>

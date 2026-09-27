@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img">
+<title>От файла к ответу</title><desc>Автоматизация выполняет правило; анализ данных помогает ответить на вопрос.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif;fill:#203047}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="470" rx="20" fill="#f5f7fb"/>
+<rect x="32" y="31" width="7" height="62" rx="3" fill="#2764b7"/>
+<text x="58" y="57" font-size="30" font-weight="700" style="fill:#203047">От файла к ответу</text>
+<text x="58" y="91" font-size="19" font-weight="400" style="fill:#203047">Автоматизация выполняет правило; анализ данных помогает ответить на вопрос.</text>
+<rect x="35" y="147" width="245" height="202" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="53" y="180" font-size="23" font-weight="700" style="fill:#2764b7">1. CSV</text>
+<text x="53" y="214" font-size="20" font-weight="400" style="fill:#203047">category, amount</text>
+<text x="53" y="243" font-size="20" font-weight="400" style="fill:#203047">books, 300</text>
+<text x="53" y="272" font-size="20" font-weight="400" style="fill:#203047">games, 500</text>
+<text x="53" y="301" font-size="20" font-weight="400" style="fill:#203047">books, 200</text>
+<polyline points="280,245 326,245" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="330" y="147" width="245" height="202" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="348" y="180" font-size="23" font-weight="700" style="fill:#2764b7">2. Проверка</text>
+<text x="348" y="214" font-size="20" font-weight="400" style="fill:#203047">amount → int</text>
+<text x="348" y="243" font-size="20" font-weight="400" style="fill:#203047">категория заполнена</text>
+<text x="348" y="272" font-size="20" font-weight="400" style="fill:#203047">ошибка → сообщить</text>
+<polyline points="575,245 621,245" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="625" y="147" width="245" height="202" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="643" y="180" font-size="23" font-weight="700" style="fill:#2764b7">3. Вычисление</text>
+<text x="643" y="214" font-size="20" font-weight="400" style="fill:#203047">сумма по категориям</text>
+<text x="643" y="243" font-size="20" font-weight="400" style="fill:#203047">books: 500</text>
+<text x="643" y="272" font-size="20" font-weight="400" style="fill:#203047">games: 500</text>
+<polyline points="870,245 916,245" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="920" y="147" width="245" height="202" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="938" y="180" font-size="23" font-weight="700" style="fill:#2764b7">4. Результат</text>
+<text x="938" y="214" font-size="20" font-weight="400" style="fill:#203047">таблица или график</text>
+<text x="938" y="243" font-size="20" font-weight="400" style="fill:#203047">отчёт в файл</text>
+<text x="938" y="272" font-size="20" font-weight="400" style="fill:#203047">ответ человеку</text>
+<text x="52" y="398" font-size="20" font-weight="400" style="fill:#203047" class="mono">csv, pathlib</text>
+<text x="348" y="398" font-size="20" font-weight="400" style="fill:#203047">ваши правила</text>
+<text x="638" y="398" font-size="20" font-weight="400" style="fill:#203047" class="mono">Python / pandas</text>
+<text x="920" y="398" font-size="20" font-weight="400" style="fill:#203047" class="mono">Matplotlib</text>
+<text x="40" y="445" font-size="19" font-weight="400" style="fill:#197568">Библиотека читает формат и строит график. Смысл показателя задаёте вы.</text>
+</svg>

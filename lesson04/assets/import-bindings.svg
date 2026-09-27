@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530" role="img">
+<title>Разный import — разные имена в вашем коде</title><desc>Модуль и функция остаются теми же объектами. Меняется способ обращения к ним.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif;fill:#203047}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="530" rx="20" fill="#f5f7fb"/>
+<rect x="32" y="31" width="7" height="62" rx="3" fill="#2764b7"/>
+<text x="58" y="57" font-size="30" font-weight="700" style="fill:#203047">Разный import — разные имена в вашем коде</text>
+<text x="58" y="91" font-size="19" font-weight="400" style="fill:#203047">Модуль и функция остаются теми же объектами. Меняется способ обращения к ним.</text>
+<rect x="40" y="145" width="480" height="285" rx="14" fill="#eaf1fb" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="58" y="178" font-size="23" font-weight="700" style="fill:#2764b7">Ваш файл или ячейка</text>
+<text x="64" y="230" font-size="22" font-weight="400" style="fill:#203047" class="mono">import math</text>
+<text x="64" y="265" font-size="21" font-weight="400" style="fill:#203047">имя math</text>
+<text x="64" y="344" font-size="22" font-weight="400" style="fill:#203047" class="mono">from math import sqrt</text>
+<text x="64" y="379" font-size="21" font-weight="400" style="fill:#203047">имя sqrt</text>
+<rect x="715" y="145" width="440" height="285" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="733" y="178" font-size="23" font-weight="700" style="fill:#2764b7">Объект модуля math</text>
+<text x="740" y="208" font-size="22" font-weight="400" style="fill:#203047" class="mono">pi = 3.14159…</text>
+<rect x="865" y="248" width="265" height="85" rx="14" fill="#e7f2ef" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="883" y="281" font-size="23" font-weight="700" style="fill:#197568">функция sqrt</text>
+<text x="740" y="392" font-size="20" font-weight="400" style="fill:#203047" class="mono">factorial, sin, cos, …</text>
+<polyline points="240,258 625,258 625,168 715,168" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="240,371 670,371 670,292 865,292" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="42" y="471" font-size="23" font-weight="400" style="fill:#203047" class="mono">math.sqrt(9)     и     sqrt(9)     вызывают одну и ту же функцию</text>
+<text x="40" y="505" font-size="19" font-weight="400" style="fill:#197568">from не копирует определение функции и не загружает только выбранную строку файла.</text>
+</svg>

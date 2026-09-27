@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img">
+<title>Веб-приложение: один запрос и один ответ</title><desc>Сервер принимает HTTP, обработчик выполняет правило, ответ возвращается клиенту.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif;fill:#203047}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="500" rx="20" fill="#f5f7fb"/>
+<rect x="32" y="31" width="7" height="62" rx="3" fill="#2764b7"/>
+<text x="58" y="57" font-size="30" font-weight="700" style="fill:#203047">Веб-приложение: один запрос и один ответ</text>
+<text x="58" y="91" font-size="19" font-weight="400" style="fill:#203047">Сервер принимает HTTP, обработчик выполняет правило, ответ возвращается клиенту.</text>
+<rect x="40" y="185" width="230" height="152" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="58" y="218" font-size="23" font-weight="700" style="fill:#2764b7">Браузер</text>
+<text x="58" y="252" font-size="20" font-weight="400" style="fill:#203047">пользователь</text>
+<text x="58" y="281" font-size="20" font-weight="400" style="fill:#203047">открыл ссылку</text>
+<rect x="460" y="185" width="260" height="152" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="478" y="218" font-size="23" font-weight="700" style="fill:#2764b7">Сервер + FastAPI</text>
+<text x="478" y="252" font-size="20" font-weight="400" style="fill:#203047">разобрать запрос</text>
+<text x="478" y="281" font-size="20" font-weight="400" style="fill:#203047">вызвать hello(name)</text>
+<rect x="875" y="185" width="285" height="152" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="893" y="218" font-size="23" font-weight="700" style="fill:#2764b7">Ваша функция</text>
+<text x="893" y="252" font-size="20" font-weight="400" style="fill:#203047">собрать приветствие</text>
+<text x="893" y="281" font-size="20" font-weight="400" style="fill:#203047">вернуть dict</text>
+<polyline points="270,220 460,220" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="264" y="164" font-size="18" font-weight="400" style="fill:#197568">GET /hello?name=Ann</text>
+<polyline points="720,220 875,220" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="724" y="164" font-size="18" font-weight="400" style="fill:#197568">name=&#x27;Ann&#x27;</text>
+<polyline points="875,302 720,302" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="726" y="375" font-size="18" font-weight="400" style="fill:#197568">словарь Python</text>
+<polyline points="460,302 270,302" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="275" y="375" font-size="18" font-weight="400" style="fill:#197568">HTTP 200 + JSON</text>
+<text x="281" y="425" font-size="23" font-weight="400" style="fill:#203047" class="mono">{&quot;message&quot;: &quot;Hello, Ann!&quot;}</text>
+<text x="40" y="475" font-size="19" font-weight="400" style="fill:#197568">Прямой вызов hello(&#x27;Ann&#x27;) проверяет функцию; HTTP требует работающего сервера.</text>
+</svg>

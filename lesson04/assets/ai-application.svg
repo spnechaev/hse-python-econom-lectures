@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img">
+<title>Готовая модель — один из компонентов приложения</title><desc>Пример: превратить сообщение «завтра в 15:00 созвон» в черновик события.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif;fill:#203047}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="520" rx="20" fill="#f5f7fb"/>
+<rect x="32" y="31" width="7" height="62" rx="3" fill="#2764b7"/>
+<text x="58" y="57" font-size="30" font-weight="700" style="fill:#203047">Готовая модель — один из компонентов приложения</text>
+<text x="58" y="91" font-size="19" font-weight="400" style="fill:#203047">Пример: превратить сообщение «завтра в 15:00 созвон» в черновик события.</text>
+<rect x="35" y="153" width="245" height="152" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="53" y="186" font-size="23" font-weight="700" style="fill:#2764b7">Сообщение</text>
+<text x="53" y="220" font-size="20" font-weight="400" style="fill:#203047">текст человека</text>
+<text x="53" y="249" font-size="20" font-weight="400" style="fill:#203047">+ текущая дата</text>
+<polyline points="280,225 326,225" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="330" y="153" width="245" height="152" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="348" y="186" font-size="23" font-weight="700" style="fill:#2764b7">Запрос к модели</text>
+<text x="348" y="220" font-size="20" font-weight="400" style="fill:#203047">инструкция</text>
+<text x="348" y="249" font-size="20" font-weight="400" style="fill:#203047">+ нужный контекст</text>
+<polyline points="575,225 621,225" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="625" y="153" width="245" height="152" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="643" y="186" font-size="23" font-weight="700" style="fill:#2764b7">Ответ модели</text>
+<text x="643" y="220" font-size="20" font-weight="400" style="fill:#203047">кандидат:</text>
+<text x="643" y="249" font-size="20" font-weight="400" style="fill:#203047">дата, время, тема</text>
+<polyline points="870,225 916,225" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="920" y="153" width="245" height="152" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="938" y="186" font-size="23" font-weight="700" style="fill:#2764b7">Проверка</text>
+<text x="938" y="220" font-size="20" font-weight="400" style="fill:#203047">формат и поля</text>
+<text x="938" y="249" font-size="20" font-weight="400" style="fill:#203047">дата существует?</text>
+<rect x="40" y="370" width="600" height="82" rx="14" fill="#e7f2ef" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="58" y="403" font-size="23" font-weight="700" style="fill:#197568">Черновик → человек проверяет → сохранение</text>
+<rect x="740" y="370" width="425" height="82" rx="14" fill="#fff0e3" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="758" y="403" font-size="23" font-weight="700" style="fill:#b86524">Ошибка → уточнить сообщение</text>
+<polyline points="985,305 985,338 340,338 340,370" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="560" y="328" font-size="18" font-weight="400" style="fill:#197568">корректно</text>
+<polyline points="1080,305 1080,370" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1069" y="345" font-size="18" font-weight="400" style="fill:#197568">не прошло</text>
+<text x="40" y="495" font-size="19" font-weight="400" style="fill:#197568">Валидный JSON ещё не означает верный смысл: проверяем и структуру, и результат.</text>
+</svg>
