@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="570" viewBox="0 0 1200 570" role="img">
+<title>У каждого проекта — свой набор библиотек</title><desc>venv создаёт окружение; pip или uv устанавливает в него пакеты; import использует их.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif;fill:#203047}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="570" rx="20" fill="#f5f7fb"/>
+<rect x="32" y="31" width="7" height="62" rx="3" fill="#2764b7"/>
+<text x="58" y="57" font-size="30" font-weight="700" style="fill:#203047">У каждого проекта — свой набор библиотек</text>
+<text x="58" y="91" font-size="19" font-weight="400" style="fill:#203047">venv создаёт окружение; pip или uv устанавливает в него пакеты; import использует их.</text>
+<rect x="420" y="128" width="360" height="90" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="438" y="161" font-size="23" font-weight="700" style="fill:#2764b7">Установленный Python</text>
+<text x="438" y="195" font-size="20" font-weight="400" style="fill:#203047">основа для обоих окружений</text>
+<polyline points="420,174 300,174 300,260" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="780,174 900,174 900,260" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="40" y="260" width="540" height="224" rx="14" fill="#eaf1fb" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="58" y="293" font-size="23" font-weight="700" style="fill:#2764b7">Проект A: бот</text>
+<rect x="620" y="260" width="540" height="224" rx="14" fill="#e7f2ef" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="638" y="293" font-size="23" font-weight="700" style="fill:#197568">Проект B: отчёт</text>
+<text x="62" y="331" font-size="22" font-weight="400" style="fill:#203047" class="mono">bot/.venv/</text>
+<text x="62" y="370" font-size="22" font-weight="400" style="fill:#203047">свой запуск Python</text>
+<text x="62" y="409" font-size="21" font-weight="400" style="fill:#203047" class="mono">своя папка site-packages</text>
+<text x="62" y="449" font-size="22" font-weight="400" style="fill:#203047">свои пакеты и их версии</text>
+<text x="642" y="331" font-size="22" font-weight="400" style="fill:#203047" class="mono">report/.venv/</text>
+<text x="642" y="370" font-size="22" font-weight="400" style="fill:#203047">свой запуск Python</text>
+<text x="642" y="409" font-size="21" font-weight="400" style="fill:#203047" class="mono">своя папка site-packages</text>
+<text x="642" y="449" font-size="22" font-weight="400" style="fill:#203047">свои пакеты и их версии</text>
+<text x="43" y="520" font-size="21" font-weight="400" style="fill:#203047">pip устанавливает в выбранную среду. Python этой среды ищет там импортируемые модули.</text>
+<text x="40" y="545" font-size="19" font-weight="400" style="fill:#197568">Код проекта хранится рядом с .venv. Окружение можно заново собрать по списку зависимостей.</text>
+</svg>
