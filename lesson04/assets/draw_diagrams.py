@@ -224,6 +224,23 @@ def package_tree():
     d.save("package-tree.svg")
 
 
+def virtual_environments():
+    d = Diagram("У каждого проекта — свой набор библиотек", "venv создаёт окружение; pip или uv устанавливает в него пакеты; import использует их.", 570)
+    d.box(420, 128, 360, 90, "Установленный Python", ["основа для обоих окружений"])
+    d.arrow("420,174 300,174 300,260")
+    d.arrow("780,174 900,174 900,260")
+    d.box(40, 260, 540, 224, "Проект A: бот", fill="#eaf1fb")
+    d.box(620, 260, 540, 224, "Проект B: отчёт", fill="#e7f2ef", color=GREEN)
+    for x, project in [(62, "bot"), (642, "report")]:
+        d.text(x, 331, f"{project}/.venv/", mono=True, size=22)
+        d.text(x, 370, "свой запуск Python", size=22)
+        d.text(x, 409, "своя папка site-packages", mono=True, size=21)
+        d.text(x, 449, "свои пакеты и их версии", size=22)
+    d.text(43, 520, "pip устанавливает в выбранную среду. Python этой среды ищет там импортируемые модули.", size=21)
+    d.note("Код проекта хранится рядом с .venv. Окружение можно заново собрать по списку зависимостей.")
+    d.save("virtual-environments.svg")
+
+
 if __name__ == "__main__":
     data_pipeline()
     machine_learning()
@@ -234,3 +251,4 @@ if __name__ == "__main__":
     import_bindings()
     import_loading()
     package_tree()
+    virtual_environments()
