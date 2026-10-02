@@ -248,8 +248,8 @@
           <h1>Оценим сложность<span style="color: var(--green)">.</span></h1>
           <p class="hero-copy">Прочитайте код. Оцените время работы.<br> От простых циклов к неочевидным случаям.</p>
         </div>
-        <div class="quiz-facts" id="quiz-facts" aria-label="8 вопросов, в каждом 5 вариантов ответа">
-          <div class="fact"><strong id="question-count">08</strong><span>вопросов</span></div>
+        <div class="quiz-facts" id="quiz-facts" aria-label="5 вопросов, в каждом 5 вариантов ответа">
+          <div class="fact"><strong id="question-count">05</strong><span>вопросов</span></div>
           <div class="fact"><strong>05</strong><span>вариантов</span></div>
         </div>
       </div>
@@ -302,7 +302,7 @@
 
       <section id="results" aria-label="Результаты квиза" hidden>
         <div class="result-banner">
-          <div class="result-score"><span id="score"></span><small id="score-total">/ 8</small></div>
+          <div class="result-score"><span id="score"></span><small id="score-total">/ 5</small></div>
           <div>
             <p class="eyebrow">Квиз завершён</p>
             <h2 id="result-title" tabindex="-1"></h2>
@@ -344,54 +344,6 @@
             "correct": 2,
             "explanation": "Первый цикл делает n итераций, второй — ещё n. Они идут друг за другом: работы всего 2n, а не n². Постоянный множитель 2 не меняет порядок роста: O(n).",
             "hard": false
-      },
-      {
-            "topic": "Вложенные циклы",
-            "reviewTitle": "Полный перебор пар",
-            "note": "values — список из n целых чисел, n ≥ 1.",
-            "code": "equal = 0\nfor left in values:\n    for right in values:\n        if left == right:\n            equal += 1",
-            "options": [
-                  "O(1)",
-                  "O(log n)",
-                  "O(n)",
-                  "O(n log n)",
-                  "O(n²)"
-            ],
-            "correct": 4,
-            "explanation": "Для каждого из n элементов внешний цикл запускает полный внутренний проход по n элементам. Получаем n · n = n² сравнений. Условие влияет на число прибавлений, но все пары будут проверены.",
-            "hard": false
-      },
-      {
-            "topic": "Цикл с условием выхода",
-            "reviewTitle": "break и худший случай",
-            "note": "values — список из n целых чисел; target — целое число. n ≥ 1.",
-            "code": "found = False\nfor value in values:\n    if value == target:\n        found = True\n        break",
-            "options": [
-                  "O(1)",
-                  "O(log n)",
-                  "O(n)",
-                  "O(n log n)",
-                  "O(n²)"
-            ],
-            "correct": 2,
-            "explanation": "В худшем случае target отсутствует в списке или стоит последним: придётся проверить все n элементов. break может сократить конкретный запуск, но оценка худшего случая остаётся O(n).",
-            "hard": true
-      },
-      {
-            "topic": "Оператор внутри цикла",
-            "reviewTitle": "Поиск в списке скрывает второй проход",
-            "note": "left и right — два списка целых чисел, каждый длины n ≥ 1.",
-            "code": "common = 0\nfor value in left:\n    if value in right:\n        common += 1",
-            "options": [
-                  "O(1)",
-                  "O(log n)",
-                  "O(n)",
-                  "O(n log n)",
-                  "O(n²)"
-            ],
-            "correct": 4,
-            "explanation": "Оператор in для списка ищет элемент последовательным перебором. Если у списков нет общих значений, каждая из n проверок просмотрит все n элементов right. Такой вход допустим, поэтому худший случай — n · n = n² действий, то есть O(n²).",
-            "hard": true
       },
       {
             "topic": "Срез внутри цикла",
