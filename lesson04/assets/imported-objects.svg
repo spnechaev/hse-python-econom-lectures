@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img">
+<title>После импорта: переназначить имя или изменить объект</title><desc>В одном интерпретаторе: import settings; from settings import limit, labels.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif;fill:#203047}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="760" rx="20" fill="#f5f7fb"/>
+<rect x="32" y="31" width="7" height="62" rx="3" fill="#2764b7"/>
+<text x="58" y="57" font-size="30" font-weight="700" style="fill:#203047">После импорта: переназначить имя или изменить объект</text>
+<text x="58" y="91" font-size="19" font-weight="400" style="fill:#203047">В одном интерпретаторе: import settings; from settings import limit, labels.</text>
+<rect x="40" y="135" width="540" height="534" rx="14" fill="#eaf1fb" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="58" y="168" font-size="23" font-weight="700" style="fill:#2764b7">Сразу после импорта</text>
+<rect x="620" y="135" width="540" height="534" rx="14" fill="#eaf1fb" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="638" y="168" font-size="23" font-weight="700" style="fill:#2764b7">После двух изменений</text>
+<text x="62" y="208" font-size="20" font-weight="400" style="fill:#203047">У каждой пары имён — общий объект.</text>
+<text x="642" y="202" font-size="19" font-weight="400" style="fill:#203047" class="mono">settings.limit = 10</text>
+<text x="642" y="237" font-size="19" font-weight="400" style="fill:#203047" class="mono">settings.labels.append(&quot;пример&quot;)</text>
+<text x="64" y="306" font-size="20" font-weight="400" style="fill:#203047" class="mono">settings.limit</text>
+<text x="64" y="380" font-size="20" font-weight="400" style="fill:#203047" class="mono">limit</text>
+<text x="64" y="469" font-size="20" font-weight="400" style="fill:#203047" class="mono">settings.labels</text>
+<text x="64" y="598" font-size="20" font-weight="400" style="fill:#203047" class="mono">labels</text>
+<text x="644" y="306" font-size="20" font-weight="400" style="fill:#203047" class="mono">settings.limit</text>
+<text x="644" y="380" font-size="20" font-weight="400" style="fill:#203047" class="mono">limit</text>
+<text x="644" y="469" font-size="20" font-weight="400" style="fill:#203047" class="mono">settings.labels</text>
+<text x="644" y="598" font-size="20" font-weight="400" style="fill:#203047" class="mono">labels</text>
+<rect x="410" y="307" width="125" height="62" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="428" y="340" font-size="23" font-weight="700" style="fill:#2764b7">3</text>
+<polyline points="248,299 320,299 320,328 410,328" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="133,373 352,373 352,352 410,352" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="990" y="270" width="125" height="62" rx="14" fill="#fff0e3" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="1008" y="303" font-size="23" font-weight="700" style="fill:#b86524">10</text>
+<rect x="990" y="344" width="125" height="62" rx="14" fill="#ffffff" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="1008" y="377" font-size="23" font-weight="700" style="fill:#2764b7">3</text>
+<polyline points="828,299 990,299" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="713,373 990,373" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="315" y="491" width="245" height="143" rx="14" fill="#e7f2ef" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="333" y="524" font-size="23" font-weight="700" style="fill:#197568">Общий список</text>
+<rect x="895" y="491" width="245" height="143" rx="14" fill="#e7f2ef" stroke="#cdd7e4" stroke-width="1.5"/>
+<text x="913" y="524" font-size="23" font-weight="700" style="fill:#197568">Тот же список</text>
+<text x="335" y="574" font-size="20" font-weight="400" style="fill:#203047" class="mono">[&quot;учебный&quot;]</text>
+<text x="915" y="565" font-size="20" font-weight="400" style="fill:#203047" class="mono">[&quot;учебный&quot;,</text>
+<text x="927" y="598" font-size="20" font-weight="400" style="fill:#203047" class="mono">&quot;пример&quot;]</text>
+<polyline points="260,462 287,462 287,551 315,551" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="147,591 271,591 271,600 315,600" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="840,462 867,462 867,551 895,551" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="727,591 851,591 851,600 895,600" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="42" y="707" font-size="23" font-weight="700" style="fill:#203047">Значение limit осталось равно 3; через оба имени labels видно добавленное слово.</text>
+<text x="40" y="735" font-size="19" font-weight="400" style="fill:#197568">from связывает имя с объектом. Переназначение одного имени не меняет остальные ссылки.</text>
+</svg>
