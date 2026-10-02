@@ -241,6 +241,79 @@ def virtual_environments():
     d.save("virtual-environments.svg")
 
 
+def reusable_function():
+    d = Diagram(
+        "Переиспользуем функцию из общего модуля",
+        "Одна функция нужна двум программам. На схеме — исходные файлы на диске.",
+        660,
+    )
+    d.text(40, 138, "КОПИИ В ДВУХ ФАЙЛАХ", size=18, bold=True, color=ORANGE)
+    d.text(665, 138, "ОБЩЕЕ ОПРЕДЕЛЕНИЕ", size=18, bold=True, color=GREEN)
+
+    for y, filename in [(163, "program_a.py"), (368, "program_b.py")]:
+        d.box(40, y, 490, 144, filename, fill="#fff0e3", color=ORANGE)
+        d.text(60, y + 77, "def normalize_spaces(text):", mono=True, size=20)
+        d.text(108, y + 110, 'return " ".join(text.split())', mono=True, size=20)
+    d.text(43, 554, "Правило записано в двух местах.", size=22)
+    d.text(43, 589, "Каждую копию нужно исправлять отдельно.", size=21, color=ORANGE)
+
+    d.box(665, 163, 495, 144, "text_tools.py", fill="#e7f2ef", color=GREEN)
+    d.text(685, 240, "def normalize_spaces(text):", mono=True, size=20)
+    d.text(733, 273, 'return " ".join(text.split())', mono=True, size=20)
+    for y, filename in [(366, "program_a.py"), (472, "program_b.py")]:
+        d.box(665, y, 495, 86, filename)
+        d.text(685, y + 66, "from text_tools import normalize_spaces", mono=True, size=18)
+    d.arrow("665,409 635,409 635,231 665,231")
+    d.arrow("665,515 601,515 601,271 665,271")
+    d.text(668, 589, "Правило меняем только в text_tools.py.", size=21, color=GREEN)
+    d.note("После правки общего модуля программы используют новую версию при следующем запуске.")
+    d.save("reusable-function.svg")
+
+
+def imported_objects():
+    d = Diagram(
+        "После импорта: переназначить имя или изменить объект",
+        "В одном интерпретаторе: import settings; from settings import limit, labels.",
+        760,
+    )
+    d.box(40, 135, 540, 534, "Сразу после импорта", fill="#eaf1fb")
+    d.box(620, 135, 540, 534, "После двух изменений", fill="#eaf1fb")
+    d.text(62, 208, "У каждой пары имён — общий объект.", size=20)
+    d.text(642, 202, "settings.limit = 10", mono=True, size=19)
+    d.text(642, 237, 'settings.labels.append("пример")', mono=True, size=19)
+
+    for x in (64, 644):
+        d.text(x, 306, "settings.limit", mono=True, size=20)
+        d.text(x, 380, "limit", mono=True, size=20)
+        d.text(x, 469, "settings.labels", mono=True, size=20)
+        d.text(x, 598, "labels", mono=True, size=20)
+
+    # Both names initially point to the same integer. Rebinding only changes
+    # settings.limit; the separately imported name still points to 3.
+    d.box(410, 307, 125, 62, "3", fill="#ffffff")
+    d.arrow("248,299 320,299 320,328 410,328")
+    d.arrow("133,373 352,373 352,352 410,352")
+    d.box(990, 270, 125, 62, "10", fill="#fff0e3", color=ORANGE)
+    d.box(990, 344, 125, 62, "3", fill="#ffffff")
+    d.arrow("828,299 990,299")
+    d.arrow("713,373 990,373")
+
+    # Each panel is a snapshot of the same interpreter: there is one list
+    # shared by both names, and append changes that list's contents.
+    for x, label in [(315, "Общий список"), (895, "Тот же список")]:
+        d.box(x, 491, 245, 143, label, fill="#e7f2ef", color=GREEN)
+    d.text(335, 574, '["учебный"]', mono=True, size=20)
+    d.text(915, 565, '["учебный",', mono=True, size=20)
+    d.text(927, 598, '"пример"]', mono=True, size=20)
+    for shift in (0, 580):
+        d.arrow(f"{260+shift},462 {287+shift},462 {287+shift},551 {315+shift},551")
+        d.arrow(f"{147+shift},591 {271+shift},591 {271+shift},600 {315+shift},600")
+
+    d.text(42, 707, "Значение limit осталось равно 3; через оба имени labels видно добавленное слово.", size=23, bold=True)
+    d.note("from связывает имя с объектом. Переназначение одного имени не меняет остальные ссылки.")
+    d.save("imported-objects.svg")
+
+
 if __name__ == "__main__":
     data_pipeline()
     machine_learning()
@@ -252,3 +325,5 @@ if __name__ == "__main__":
     import_loading()
     package_tree()
     virtual_environments()
+    reusable_function()
+    imported_objects()
