@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img">
+<title>Повторить ссылку или создать новую строку</title><desc>Состояние после присваивания 7 в элемент [0][1] каждого списка.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="620" rx="20" fill="#f5f7fb"/>
+<text xml:space="preserve" x="40" y="52" font-size="30" fill="#203047" font-weight="700" class="">Повторить ссылку или создать новую строку</text>
+<text xml:space="preserve" x="40" y="88" font-size="20" fill="#203047" font-weight="400" class="">Состояние после присваивания 7 в элемент [0][1] каждого списка.</text>
+<text xml:space="preserve" x="40" y="140" font-size="21" fill="#203047" font-weight="400" class="mono">wrong = [[0] * 3] * 2</text>
+<text xml:space="preserve" x="620" y="140" font-size="21" fill="#203047" font-weight="400" class="mono">right = [[0] * 3 for _ in range(2)]</text>
+<text xml:space="preserve" x="40" y="181" font-size="22" fill="#2764b7" font-weight="400" class="mono">wrong[0][1] = 7</text>
+<text xml:space="preserve" x="620" y="181" font-size="22" fill="#197568" font-weight="400" class="mono">right[0][1] = 7</text>
+<text xml:space="preserve" x="40" y="240" font-size="22" fill="#2764b7" font-weight="400" class="mono">wrong</text>
+<rect x="40" y="258" width="190" height="110" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="56" y="294" font-size="20" fill="#203047" font-weight="400" class="mono">[0]</text>
+<circle cx="185" cy="287" r="5" fill="#2764b7"/>
+<text xml:space="preserve" x="56" y="342" font-size="20" fill="#203047" font-weight="400" class="mono">[1]</text>
+<circle cx="185" cy="335" r="5" fill="#2764b7"/>
+<text xml:space="preserve" x="620" y="240" font-size="22" fill="#2764b7" font-weight="400" class="mono">right</text>
+<rect x="620" y="258" width="190" height="110" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="636" y="294" font-size="20" fill="#203047" font-weight="400" class="mono">[0]</text>
+<circle cx="765" cy="287" r="5" fill="#2764b7"/>
+<text xml:space="preserve" x="636" y="342" font-size="20" fill="#203047" font-weight="400" class="mono">[1]</text>
+<circle cx="765" cy="335" r="5" fill="#2764b7"/>
+<rect x="335" y="280" width="230" height="60" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="353" y="319" font-size="22" fill="#203047" font-weight="400" class="mono">[0, 7, 0]</text>
+<rect x="930" y="250" width="230" height="60" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="948" y="289" font-size="22" fill="#203047" font-weight="400" class="mono">[0, 7, 0]</text>
+<rect x="930" y="375" width="230" height="60" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="948" y="414" font-size="22" fill="#203047" font-weight="400" class="mono">[0, 0, 0]</text>
+<polyline points="185,287 275,287 335,300" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="185,335 275,335 335,321" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="765,287 850,287 930,280" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="765,335 850,335 930,405" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="40" y="483" font-size="21" fill="#203047" font-weight="400" class="">Один объект строки, две ссылки.</text>
+<text xml:space="preserve" x="620" y="483" font-size="21" fill="#203047" font-weight="400" class="">Два отдельных объекта строки.</text>
+<text xml:space="preserve" x="40" y="530" font-size="21" fill="#203047" font-weight="400" class="mono">[[0, 7, 0], [0, 7, 0]]</text>
+<text xml:space="preserve" x="620" y="530" font-size="21" fill="#203047" font-weight="400" class="mono">[[0, 7, 0], [0, 0, 0]]</text>
+<text xml:space="preserve" x="40" y="591" font-size="20" fill="#197568" font-weight="400" class="">Умножение повторяет ссылки на те же объекты. Вложенные списки не копируются.</text>
+</svg>

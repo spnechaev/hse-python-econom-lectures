@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="730" viewBox="0 0 1200 730" role="img">
+<title>JSON: из объекта в текст и обратно</title><desc>dumps возвращает строку str; loads читает строку и создаёт объекты Python.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="730" rx="20" fill="#f5f7fb"/>
+<text xml:space="preserve" x="40" y="52" font-size="30" fill="#203047" font-weight="700" class="">JSON: из объекта в текст и обратно</text>
+<text xml:space="preserve" x="40" y="88" font-size="20" fill="#203047" font-weight="400" class="">dumps возвращает строку str; loads читает строку и создаёт объекты Python.</text>
+<text xml:space="preserve" x="45" y="158" font-size="22" fill="#2764b7" font-weight="700" class="">Python · dict</text>
+<rect x="35" y="240" width="330" height="310" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="445" y="158" font-size="22" fill="#2764b7" font-weight="700" class="">JSON · str</text>
+<rect x="435" y="240" width="330" height="310" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="845" y="158" font-size="22" fill="#2764b7" font-weight="700" class="">Python · новый dict</text>
+<rect x="835" y="240" width="330" height="310" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<polyline points="220,225 220,196 580,196 580,225" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="640,225 640,196 1000,196 1000,225" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="295" y="187" font-size="21" fill="#203047" font-weight="400" class="mono">json.dumps</text>
+<text xml:space="preserve" x="710" y="187" font-size="21" fill="#203047" font-weight="400" class="mono">json.loads</text>
+<text xml:space="preserve" x="50" y="275" font-size="20" fill="#203047" font-weight="400" class="mono">{</text>
+<text xml:space="preserve" x="50" y="307" font-size="20" fill="#203047" font-weight="400" class="mono">  &#x27;name&#x27;: &#x27;Аня&#x27;,</text>
+<text xml:space="preserve" x="50" y="339" font-size="20" fill="#203047" font-weight="400" class="mono">  &#x27;scores&#x27;: [10, 20],</text>
+<text xml:space="preserve" x="50" y="371" font-size="20" fill="#203047" font-weight="400" class="mono">  &#x27;active&#x27;: True,</text>
+<text xml:space="preserve" x="50" y="403" font-size="20" fill="#203047" font-weight="400" class="mono">  &#x27;note&#x27;: None</text>
+<text xml:space="preserve" x="50" y="435" font-size="20" fill="#203047" font-weight="400" class="mono">}</text>
+<text xml:space="preserve" x="450" y="275" font-size="20" fill="#203047" font-weight="400" class="mono">{</text>
+<text xml:space="preserve" x="450" y="307" font-size="20" fill="#203047" font-weight="400" class="mono">  &quot;name&quot;: &quot;Аня&quot;,</text>
+<text xml:space="preserve" x="450" y="339" font-size="20" fill="#203047" font-weight="400" class="mono">  &quot;scores&quot;: [</text>
+<text xml:space="preserve" x="450" y="371" font-size="20" fill="#203047" font-weight="400" class="mono">    10,</text>
+<text xml:space="preserve" x="450" y="403" font-size="20" fill="#203047" font-weight="400" class="mono">    20</text>
+<text xml:space="preserve" x="450" y="435" font-size="20" fill="#203047" font-weight="400" class="mono">  ],</text>
+<text xml:space="preserve" x="450" y="467" font-size="20" fill="#203047" font-weight="400" class="mono">  &quot;active&quot;: true,</text>
+<text xml:space="preserve" x="450" y="499" font-size="20" fill="#203047" font-weight="400" class="mono">  &quot;note&quot;: null</text>
+<text xml:space="preserve" x="450" y="531" font-size="20" fill="#203047" font-weight="400" class="mono">}</text>
+<text xml:space="preserve" x="850" y="275" font-size="20" fill="#203047" font-weight="400" class="mono">{</text>
+<text xml:space="preserve" x="850" y="307" font-size="20" fill="#203047" font-weight="400" class="mono">  &#x27;name&#x27;: &#x27;Аня&#x27;,</text>
+<text xml:space="preserve" x="850" y="339" font-size="20" fill="#203047" font-weight="400" class="mono">  &#x27;scores&#x27;: [10, 20],</text>
+<text xml:space="preserve" x="850" y="371" font-size="20" fill="#203047" font-weight="400" class="mono">  &#x27;active&#x27;: True,</text>
+<text xml:space="preserve" x="850" y="403" font-size="20" fill="#203047" font-weight="400" class="mono">  &#x27;note&#x27;: None</text>
+<text xml:space="preserve" x="850" y="435" font-size="20" fill="#203047" font-weight="400" class="mono">}</text>
+<text xml:space="preserve" x="40" y="595" font-size="21" fill="#203047" font-weight="400" class="mono">text = json.dumps(data, ensure_ascii=False, indent=2)</text>
+<text xml:space="preserve" x="40" y="631" font-size="21" fill="#203047" font-weight="400" class="mono">restored = json.loads(text)</text>
+<text xml:space="preserve" x="40" y="697" font-size="21" fill="#197568" font-weight="400" class="">Для открытого файла: json.dump(data, file) записывает; json.load(file) читает.</text>
+</svg>

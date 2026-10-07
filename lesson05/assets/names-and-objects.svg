@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img">
+<title>Имена ссылаются на объекты</title><desc>Присваивание связывает имя с объектом. Равные списки могут быть разными объектами.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="660" rx="20" fill="#f5f7fb"/>
+<text xml:space="preserve" x="40" y="52" font-size="30" fill="#203047" font-weight="700" class="">Имена ссылаются на объекты</text>
+<text xml:space="preserve" x="40" y="88" font-size="20" fill="#203047" font-weight="400" class="">Присваивание связывает имя с объектом. Равные списки могут быть разными объектами.</text>
+<text xml:space="preserve" x="40" y="140" font-size="22" fill="#203047" font-weight="400" class="mono">a = [10, 20]; b = a; c = [10, 20]</text>
+<text xml:space="preserve" x="95" y="212" font-size="26" fill="#2764b7" font-weight="400" class="mono">a</text>
+<text xml:space="preserve" x="95" y="284" font-size="26" fill="#2764b7" font-weight="400" class="mono">b</text>
+<text xml:space="preserve" x="95" y="356" font-size="26" fill="#2764b7" font-weight="400" class="mono">c</text>
+<rect x="330" y="200" width="220" height="60" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="348" y="239" font-size="22" fill="#203047" font-weight="400" class="mono">[10, 20]</text>
+<rect x="330" y="320" width="220" height="60" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="348" y="359" font-size="22" fill="#203047" font-weight="400" class="mono">[10, 20]</text>
+<polyline points="130,205 230,205 330,222" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="130,277 230,277 330,244" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="130,349 330,349" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="625" y="233" font-size="22" fill="#203047" font-weight="400" class="mono">a is b → True</text>
+<text xml:space="preserve" x="625" y="287" font-size="22" fill="#203047" font-weight="400" class="mono">a == c → True</text>
+<text xml:space="preserve" x="625" y="341" font-size="22" fill="#203047" font-weight="400" class="mono">a is c → False</text>
+<text xml:space="preserve" x="40" y="426" font-size="22" fill="#197568" font-weight="700" class="">Два независимых продолжения исходного примера</text>
+<rect x="40" y="450" width="540" height="155" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<rect x="610" y="450" width="550" height="155" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="60" y="487" font-size="22" fill="#2764b7" font-weight="400" class="mono">b = [99]</text>
+<text xml:space="preserve" x="60" y="524" font-size="21" fill="#203047" font-weight="400" class="">Имя b переходит к новому списку.</text>
+<text xml:space="preserve" x="60" y="567" font-size="21" fill="#203047" font-weight="400" class="mono">a → [10, 20]; b → [99]</text>
+<text xml:space="preserve" x="630" y="487" font-size="22" fill="#2764b7" font-weight="400" class="mono">b.append(30)</text>
+<text xml:space="preserve" x="630" y="524" font-size="21" fill="#203047" font-weight="400" class="">Меняется общий список a и b.</text>
+<text xml:space="preserve" x="630" y="567" font-size="21" fill="#203047" font-weight="400" class="mono">a и b → [10, 20, 30]</text>
+<text xml:space="preserve" x="40" y="637" font-size="19" fill="#197568" font-weight="400" class="">В обоих продолжениях c по-прежнему ссылается на свой список [10, 20].</text>
+</svg>

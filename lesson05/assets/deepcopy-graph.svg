@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="570" viewBox="0 0 1200 570" role="img">
+<title>deepcopy сохраняет связи внутри копии</title><desc>В этом примере вложенная строка скопирована один раз: обе новые ссылки ведут к ней.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="570" rx="20" fill="#f5f7fb"/>
+<text xml:space="preserve" x="40" y="52" font-size="30" fill="#203047" font-weight="700" class="">deepcopy сохраняет связи внутри копии</text>
+<text xml:space="preserve" x="40" y="88" font-size="20" fill="#203047" font-weight="400" class="">В этом примере вложенная строка скопирована один раз: обе новые ссылки ведут к ней.</text>
+<text xml:space="preserve" x="40" y="137" font-size="21" fill="#203047" font-weight="400" class="mono">from copy import deepcopy</text>
+<text xml:space="preserve" x="40" y="175" font-size="21" fill="#203047" font-weight="400" class="mono">row = [1, 2]; base = [row, row]; cloned = deepcopy(base)</text>
+<text xml:space="preserve" x="40" y="262" font-size="22" fill="#2764b7" font-weight="400" class="mono">base</text>
+<rect x="40" y="280" width="190" height="110" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="56" y="316" font-size="20" fill="#203047" font-weight="400" class="mono">[0]</text>
+<circle cx="185" cy="309" r="5" fill="#2764b7"/>
+<text xml:space="preserve" x="56" y="364" font-size="20" fill="#203047" font-weight="400" class="mono">[1]</text>
+<circle cx="185" cy="357" r="5" fill="#2764b7"/>
+<text xml:space="preserve" x="620" y="262" font-size="22" fill="#2764b7" font-weight="400" class="mono">cloned</text>
+<rect x="620" y="280" width="190" height="110" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="636" y="316" font-size="20" fill="#203047" font-weight="400" class="mono">[0]</text>
+<circle cx="765" cy="309" r="5" fill="#2764b7"/>
+<text xml:space="preserve" x="636" y="364" font-size="20" fill="#203047" font-weight="400" class="mono">[1]</text>
+<circle cx="765" cy="357" r="5" fill="#2764b7"/>
+<rect x="340" y="305" width="220" height="60" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="358" y="344" font-size="22" fill="#203047" font-weight="400" class="mono">[1, 2]</text>
+<rect x="930" y="305" width="220" height="60" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="948" y="344" font-size="22" fill="#203047" font-weight="400" class="mono">[1, 2]</text>
+<text xml:space="preserve" x="340" y="269" font-size="22" fill="#2764b7" font-weight="400" class="mono">row</text>
+<polyline points="367,276 367,305" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="185,309 290,309 340,323" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="185,357 290,357 340,346" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="765,309 880,309 930,323" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="765,357 880,357 930,346" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="40" y="452" font-size="22" fill="#203047" font-weight="400" class="mono">base[0] is cloned[0] → False</text>
+<text xml:space="preserve" x="40" y="495" font-size="22" fill="#197568" font-weight="400" class="mono">cloned[0] is cloned[1] → True</text>
+<text xml:space="preserve" x="40" y="545" font-size="21" fill="#203047" font-weight="400" class="">Изменение cloned[0] затронет cloned[1], но не исходную row.</text>
+</svg>

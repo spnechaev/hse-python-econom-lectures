@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="570" viewBox="0 0 1200 570" role="img">
+<title>Поверхностная копия: новый внешний список</title><desc>Вложенные списки остаются общими: копируются ссылки на них.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="570" rx="20" fill="#f5f7fb"/>
+<text xml:space="preserve" x="40" y="52" font-size="30" fill="#203047" font-weight="700" class="">Поверхностная копия: новый внешний список</text>
+<text xml:space="preserve" x="40" y="88" font-size="20" fill="#203047" font-weight="400" class="">Вложенные списки остаются общими: копируются ссылки на них.</text>
+<text xml:space="preserve" x="40" y="140" font-size="22" fill="#203047" font-weight="400" class="mono">base = [[1, 2], [3, 4]]; copied = base.copy()</text>
+<text xml:space="preserve" x="90" y="207" font-size="22" fill="#2764b7" font-weight="400" class="mono">base</text>
+<rect x="90" y="225" width="190" height="110" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="106" y="261" font-size="20" fill="#203047" font-weight="400" class="mono">[0]</text>
+<circle cx="235" cy="254" r="5" fill="#2764b7"/>
+<text xml:space="preserve" x="106" y="309" font-size="20" fill="#203047" font-weight="400" class="mono">[1]</text>
+<circle cx="235" cy="302" r="5" fill="#2764b7"/>
+<text xml:space="preserve" x="900" y="207" font-size="22" fill="#2764b7" font-weight="400" class="mono">copied</text>
+<rect x="900" y="225" width="190" height="110" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="916" y="261" font-size="20" fill="#203047" font-weight="400" class="mono">[0]</text>
+<circle cx="1045" cy="254" r="5" fill="#2764b7"/>
+<text xml:space="preserve" x="916" y="309" font-size="20" fill="#203047" font-weight="400" class="mono">[1]</text>
+<circle cx="1045" cy="302" r="5" fill="#2764b7"/>
+<rect x="490" y="200" width="220" height="60" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="508" y="239" font-size="22" fill="#203047" font-weight="400" class="mono">[1, 2]</text>
+<rect x="490" y="350" width="220" height="60" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="508" y="389" font-size="22" fill="#203047" font-weight="400" class="mono">[3, 4]</text>
+<polyline points="235,254 360,254 490,230" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="235,302 360,302 490,380" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="1045,254 1115,254 1115,180 600,180 600,200" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="1045,302 1115,302 1115,435 600,435 600,410" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="70" y="488" font-size="22" fill="#203047" font-weight="400" class="mono">base is copied → False</text>
+<text xml:space="preserve" x="70" y="531" font-size="22" fill="#197568" font-weight="400" class="mono">base[0] is copied[0] → True</text>
+</svg>

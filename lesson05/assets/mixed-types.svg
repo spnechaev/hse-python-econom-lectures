@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img">
+<title>Один список — объекты разных типов</title><desc>Тип принадлежит объекту. Список хранит ссылки, поэтому элементам не нужен общий тип.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="600" rx="20" fill="#f5f7fb"/>
+<text xml:space="preserve" x="40" y="52" font-size="30" fill="#203047" font-weight="700" class="">Один список — объекты разных типов</text>
+<text xml:space="preserve" x="40" y="88" font-size="20" fill="#203047" font-weight="400" class="">Тип принадлежит объекту. Список хранит ссылки, поэтому элементам не нужен общий тип.</text>
+<text xml:space="preserve" x="40" y="140" font-size="22" fill="#203047" font-weight="400" class="mono">values = [&quot;Аня&quot;, 20, True, None]</text>
+<text xml:space="preserve" x="45" y="277" font-size="22" fill="#2764b7" font-weight="400" class="mono">values</text>
+<polyline points="140,270 235,270" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="235" y="202" font-size="22" fill="#2764b7" font-weight="700" class="">Объект list: четыре ссылки</text>
+<rect x="235" y="222" width="690" height="96" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<rect x="250" y="237" width="150" height="65" rx="12" fill="#eef3fb" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="265" y="276" font-size="20" fill="#203047" font-weight="400" class="mono">[0]</text>
+<circle cx="365" cy="270" r="5" fill="#2764b7"/>
+<polyline points="365,275 365,355 325,355 325,390" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="245" y="390" width="160" height="105" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="262" y="425" font-size="21" fill="#197568" font-weight="400" class="mono">str</text>
+<text xml:space="preserve" x="262" y="469" font-size="24" fill="#203047" font-weight="400" class="mono">&quot;Аня&quot;</text>
+<rect x="420" y="237" width="150" height="65" rx="12" fill="#eef3fb" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="435" y="276" font-size="20" fill="#203047" font-weight="400" class="mono">[1]</text>
+<circle cx="535" cy="270" r="5" fill="#2764b7"/>
+<polyline points="535,275 535,355 495,355 495,390" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="415" y="390" width="160" height="105" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="432" y="425" font-size="21" fill="#197568" font-weight="400" class="mono">int</text>
+<text xml:space="preserve" x="432" y="469" font-size="24" fill="#203047" font-weight="400" class="mono">20</text>
+<rect x="590" y="237" width="150" height="65" rx="12" fill="#eef3fb" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="605" y="276" font-size="20" fill="#203047" font-weight="400" class="mono">[2]</text>
+<circle cx="705" cy="270" r="5" fill="#2764b7"/>
+<polyline points="705,275 705,355 665,355 665,390" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="585" y="390" width="160" height="105" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="602" y="425" font-size="21" fill="#197568" font-weight="400" class="mono">bool</text>
+<text xml:space="preserve" x="602" y="469" font-size="24" fill="#203047" font-weight="400" class="mono">True</text>
+<rect x="760" y="237" width="150" height="65" rx="12" fill="#eef3fb" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="775" y="276" font-size="20" fill="#203047" font-weight="400" class="mono">[3]</text>
+<circle cx="875" cy="270" r="5" fill="#2764b7"/>
+<polyline points="875,275 875,355 835,355 835,390" fill="none" stroke="#63768b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="755" y="390" width="160" height="105" rx="12" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text xml:space="preserve" x="772" y="425" font-size="21" fill="#197568" font-weight="400" class="mono">NoneType</text>
+<text xml:space="preserve" x="772" y="469" font-size="24" fill="#203047" font-weight="400" class="mono">None</text>
+<text xml:space="preserve" x="40" y="563" font-size="20" fill="#203047" font-weight="400" class="">Это схема связей между объектами, а не их расположения в памяти.</text>
+</svg>
