@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img">
+<title>Работа пузырька: уменьшаем несортированную часть</title><desc>Для n = 5 верхняя граница — 4 + 3 + 2 + 1 = 10 сравнений.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="620" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">Работа пузырька: уменьшаем несортированную часть</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">Для n = 5 верхняя граница — 4 + 3 + 2 + 1 = 10 сравнений.</text>
+<text x="40" y="175" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Проход 1</text>
+<rect x="200" y="145" width="60" height="44" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="230" y="174" font-size="22" fill="#2764b7" font-weight="400" text-anchor="middle" class="">?</text>
+<rect x="275" y="145" width="60" height="44" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="305" y="174" font-size="22" fill="#2764b7" font-weight="400" text-anchor="middle" class="">?</text>
+<rect x="350" y="145" width="60" height="44" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="380" y="174" font-size="22" fill="#2764b7" font-weight="400" text-anchor="middle" class="">?</text>
+<rect x="425" y="145" width="60" height="44" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="455" y="174" font-size="22" fill="#2764b7" font-weight="400" text-anchor="middle" class="">?</text>
+<text x="540" y="174" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">4 сравнений</text>
+<text x="40" y="250" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Проход 2</text>
+<rect x="200" y="220" width="60" height="44" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="230" y="249" font-size="22" fill="#2764b7" font-weight="400" text-anchor="middle" class="">?</text>
+<rect x="275" y="220" width="60" height="44" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="305" y="249" font-size="22" fill="#2764b7" font-weight="400" text-anchor="middle" class="">?</text>
+<rect x="350" y="220" width="60" height="44" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="380" y="249" font-size="22" fill="#2764b7" font-weight="400" text-anchor="middle" class="">?</text>
+<rect x="425" y="220" width="60" height="44" rx="10" fill="#edf0f5" stroke="#cdd7e4" stroke-width="2"/>
+<text x="540" y="249" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">3 сравнений</text>
+<text x="40" y="325" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Проход 3</text>
+<rect x="200" y="295" width="60" height="44" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="230" y="324" font-size="22" fill="#2764b7" font-weight="400" text-anchor="middle" class="">?</text>
+<rect x="275" y="295" width="60" height="44" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="305" y="324" font-size="22" fill="#2764b7" font-weight="400" text-anchor="middle" class="">?</text>
+<rect x="350" y="295" width="60" height="44" rx="10" fill="#edf0f5" stroke="#cdd7e4" stroke-width="2"/>
+<rect x="425" y="295" width="60" height="44" rx="10" fill="#edf0f5" stroke="#cdd7e4" stroke-width="2"/>
+<text x="540" y="324" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">2 сравнений</text>
+<text x="40" y="400" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Проход 4</text>
+<rect x="200" y="370" width="60" height="44" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="230" y="399" font-size="22" fill="#2764b7" font-weight="400" text-anchor="middle" class="">?</text>
+<rect x="275" y="370" width="60" height="44" rx="10" fill="#edf0f5" stroke="#cdd7e4" stroke-width="2"/>
+<rect x="350" y="370" width="60" height="44" rx="10" fill="#edf0f5" stroke="#cdd7e4" stroke-width="2"/>
+<rect x="425" y="370" width="60" height="44" rx="10" fill="#edf0f5" stroke="#cdd7e4" stroke-width="2"/>
+<text x="540" y="399" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">1 сравнений</text>
+<rect x="785" y="145" width="370" height="174" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="803" y="179" font-size="21" fill="#2764b7" font-weight="700" text-anchor="start" class="">В общем случае</text>
+<text x="803" y="213" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">(n − 1) + … + 1</text>
+<text x="803" y="247" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">n(n − 1) / 2</text>
+<text x="803" y="281" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Худший случай: O(n²)</text>
+<rect x="40" y="477" width="1120" height="97" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="514" font-size="23" fill="#197568" font-weight="700" text-anchor="start" class="">Ни одного обмена за проход? Можно закончить.</text>
+<text x="60" y="549" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Уже отсортированный список: один проход, n − 1 сравнений, O(n).</text>
+</svg>

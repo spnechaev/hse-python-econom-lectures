@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img">
+<title>Quicksort: вызовы возвращают готовые части</title><desc>Для ручной трассировки фиксируем опорные. В программе опорный выбирается случайно.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="800" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">Quicksort: вызовы возвращают готовые части</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">Для ручной трассировки фиксируем опорные. В программе опорный выбирается случайно.</text>
+<rect x="40" y="125" width="540" height="355" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="160" font-size="23" fill="#2764b7" font-weight="700" text-anchor="start" class="">1. quick_sort([2, 1]), опорный 1</text>
+<text x="60" y="202" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">Разбиение: []    [1]    [2]</text>
+<path d="M165 220L165 265" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M440 220L440 265" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="80" y="298" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="mono">quick_sort([])</text>
+<text x="330" y="298" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="mono">quick_sort([2])</text>
+<text x="80" y="334" font-size="20" fill="#197568" font-weight="400" text-anchor="start" class="">возвращает []</text>
+<text x="330" y="334" font-size="20" fill="#197568" font-weight="400" text-anchor="start" class="">возвращает [2]</text>
+<text x="60" y="375" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Длина 0 или 1: список уже отсортирован.</text>
+<rect x="60" y="402" width="500" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="80" y="437" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[] + [1] + [2] = [1, 2]</text>
+<rect x="620" y="125" width="540" height="355" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="640" y="160" font-size="23" fill="#2764b7" font-weight="700" text-anchor="start" class="">2. quick_sort([5, 5, 4]), опорный 5</text>
+<text x="640" y="202" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">Разбиение: [4]    [5, 5]    []</text>
+<path d="M740 220L740 265" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M1030 220L1030 265" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="650" y="298" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="mono">quick_sort([4])</text>
+<text x="930" y="298" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="mono">quick_sort([])</text>
+<text x="650" y="334" font-size="20" fill="#197568" font-weight="400" text-anchor="start" class="">возвращает [4]</text>
+<text x="930" y="334" font-size="20" fill="#197568" font-weight="400" text-anchor="start" class="">возвращает []</text>
+<text x="640" y="375" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Равные опорному [5, 5] уже готовы.</text>
+<rect x="640" y="402" width="500" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="660" y="437" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">[4] + [5, 5] + [] = [4, 5, 5]</text>
+<text x="40" y="531" font-size="24" fill="#2764b7" font-weight="700" text-anchor="start" class="">3. Возвращаемся в quick_sort([5, 2, 5, 1, 4, 3]), опорный 3</text>
+<text x="40" y="578" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Вернулась левая часть</text>
+<rect x="40" y="600" width="310" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="195.0" y="636" font-size="25" fill="#203047" font-weight="400" text-anchor="middle" class="mono">[1, 2]</text>
+<text x="445" y="578" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Равные опорному</text>
+<rect x="445" y="600" width="220" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="555.0" y="636" font-size="25" fill="#203047" font-weight="400" text-anchor="middle" class="mono">[3]</text>
+<text x="760" y="578" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Вернулась правая часть</text>
+<rect x="760" y="600" width="400" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="960.0" y="636" font-size="25" fill="#203047" font-weight="400" text-anchor="middle" class="mono">[4, 5, 5]</text>
+<text x="394" y="638" font-size="30" fill="#203047" font-weight="400" text-anchor="middle" class="">+</text>
+<text x="710" y="638" font-size="30" fill="#203047" font-weight="400" text-anchor="middle" class="">+</text>
+<path d="M600 665L600 707" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="600" y="749" font-size="28" fill="#197568" font-weight="700" text-anchor="middle" class="mono">[1, 2, 3, 4, 5, 5]</text>
+</svg>

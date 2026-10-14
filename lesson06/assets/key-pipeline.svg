@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="655" viewBox="0 0 1200 655" role="img">
+<title>key: сравниваем ключи, возвращаем записи</title><desc>sorted(participants, key=score_key) — по баллам по возрастанию.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="655" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">key: сравниваем ключи, возвращаем записи</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">sorted(participants, key=score_key) — по баллам по возрастанию.</text>
+<text x="40" y="145" font-size="23" fill="#2764b7" font-weight="700" text-anchor="start" class="">Исходные записи</text>
+<text x="490" y="145" font-size="23" fill="#2764b7" font-weight="700" text-anchor="start" class="">Ключи</text>
+<text x="790" y="145" font-size="23" fill="#2764b7" font-weight="700" text-anchor="start" class="">Результат</text>
+<rect x="40" y="175" width="310" height="55" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="58" y="210" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Вера · 80</text>
+<path d="M365 203L480 203" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="490" y="175" width="90" height="55" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="535" y="210" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">80</text>
+<rect x="40" y="260" width="310" height="55" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="58" y="295" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Аня · 95</text>
+<path d="M365 288L480 288" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="490" y="260" width="90" height="55" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="535" y="295" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">95</text>
+<rect x="40" y="345" width="310" height="55" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="58" y="380" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Борис · 80</text>
+<path d="M365 373L480 373" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="490" y="345" width="90" height="55" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="535" y="380" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">80</text>
+<rect x="40" y="430" width="310" height="55" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="58" y="465" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Глеб · 90</text>
+<path d="M365 458L480 458" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="490" y="430" width="90" height="55" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="535" y="465" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">90</text>
+<rect x="790" y="175" width="350" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="810" y="210" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Вера · 80</text>
+<rect x="790" y="260" width="350" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="810" y="295" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Борис · 80</text>
+<rect x="790" y="345" width="350" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="810" y="380" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Глеб · 90</text>
+<rect x="790" y="430" width="350" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="810" y="465" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Аня · 95</text>
+<path d="M605 290L765 290" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="685" y="270" font-size="18" fill="#2764b7" font-weight="400" text-anchor="middle" class="">Сортировка</text>
+<text x="40" y="578" font-size="23" fill="#197568" font-weight="700" text-anchor="start" class="">Функция key вызывается один раз для каждого входного элемента.</text>
+<text x="40" y="618" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">При равных ключах Вера остаётся раньше Бориса, как в исходном списке.</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="665" viewBox="0 0 1200 665" role="img">
+<title>Составной ключ: сначала баллы, затем имя</title><desc>key=lambda row: (-row[&quot;score&quot;], row[&quot;name&quot;]) — обычное сравнение кортежей.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="665" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">Составной ключ: сначала баллы, затем имя</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">key=lambda row: (-row[&quot;score&quot;], row[&quot;name&quot;]) — обычное сравнение кортежей.</text>
+<text x="50" y="176" font-size="24" fill="#203047" font-weight="400" text-anchor="start" class="">1.  Аня · 95</text>
+<rect x="390" y="145" width="350" height="48" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="410" y="176" font-size="24" fill="#203047" font-weight="400" text-anchor="start" class="mono">(-95, &quot;Аня&quot;)</text>
+<text x="50" y="254" font-size="24" fill="#203047" font-weight="400" text-anchor="start" class="">2.  Глеб · 90</text>
+<rect x="390" y="223" width="350" height="48" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="410" y="254" font-size="24" fill="#203047" font-weight="400" text-anchor="start" class="mono">(-90, &quot;Глеб&quot;)</text>
+<text x="50" y="332" font-size="24" fill="#203047" font-weight="400" text-anchor="start" class="">3.  Борис · 80</text>
+<rect x="390" y="301" width="350" height="48" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="410" y="332" font-size="24" fill="#203047" font-weight="400" text-anchor="start" class="mono">(-80, &quot;Борис&quot;)</text>
+<text x="50" y="410" font-size="24" fill="#203047" font-weight="400" text-anchor="start" class="">4.  Вера · 80</text>
+<rect x="390" y="379" width="350" height="48" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="410" y="410" font-size="24" fill="#203047" font-weight="400" text-anchor="start" class="mono">(-80, &quot;Вера&quot;)</text>
+<text x="50" y="462" font-size="21" fill="#197568" font-weight="400" text-anchor="start" class="">Только баллы: Вера → Борис. Добавили имя: Борис → Вера.</text>
+<rect x="40" y="495" width="540" height="140" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="58" y="529" font-size="21" fill="#2764b7" font-weight="700" text-anchor="start" class="">Борис и Вера</text>
+<text x="58" y="563" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">−80 = −80 → сравниваем имена.</text>
+<text x="58" y="597" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">«Борис» раньше «Вера».</text>
+<rect x="620" y="495" width="540" height="140" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="638" y="529" font-size="21" fill="#2764b7" font-weight="700" text-anchor="start" class="">Аня и Борис</text>
+<text x="638" y="563" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">−95 &lt; −80 → решение уже принято.</text>
+<text x="638" y="597" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">До сравнения имён дело не доходит.</text>
+</svg>

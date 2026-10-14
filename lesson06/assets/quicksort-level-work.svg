@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740" role="img">
+<title>Quicksort: считаем работу всего уровня</title><desc>Пример: n = 7, опорные 4, затем 2 и 6. Числа справа — элементы в проходах разбиения.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="740" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">Quicksort: считаем работу всего уровня</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">Пример: n = 7, опорные 4, затем 2 и 6. Числа справа — элементы в проходах разбиения.</text>
+<text x="40" y="163" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">Глубина 0</text>
+<rect x="260" y="130" width="60" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="290.0" y="161" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">1</text>
+<rect x="330" y="130" width="60" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="360.0" y="161" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">2</text>
+<rect x="400" y="130" width="60" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="430.0" y="161" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">3</text>
+<rect x="470" y="130" width="60" height="46" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="500.0" y="161" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">4</text>
+<rect x="540" y="130" width="60" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="570.0" y="161" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">5</text>
+<rect x="610" y="130" width="60" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="640.0" y="161" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">6</text>
+<rect x="680" y="130" width="60" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="710.0" y="161" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">7</text>
+<text x="900" y="161" font-size="23" fill="#2764b7" font-weight="700" text-anchor="start" class="">7 элементов</text>
+<path d="M480 190L360 252" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M580 190L700 252" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="40" y="307" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">Глубина 1</text>
+<rect x="260" y="275" width="60" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="290.0" y="306" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">1</text>
+<rect x="330" y="275" width="60" height="46" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="360.0" y="306" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">2</text>
+<rect x="400" y="275" width="60" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="430.0" y="306" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">3</text>
+<rect x="600" y="275" width="60" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="630.0" y="306" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">5</text>
+<rect x="670" y="275" width="60" height="46" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="700.0" y="306" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">6</text>
+<rect x="740" y="275" width="60" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="770.0" y="306" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">7</text>
+<text x="900" y="306" font-size="23" fill="#2764b7" font-weight="700" text-anchor="start" class="">3 + 3 = 6</text>
+<text x="430" y="365" font-size="20" fill="#197568" font-weight="400" text-anchor="start" class="">4 уже выделена: в дочерние части не входит.</text>
+<path d="M290 385L280 430" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M430 385L450 430" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M630 385L620 430" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M770 385L790 430" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="40" y="477" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">Глубина 2</text>
+<rect x="250" y="445" width="60" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="280.0" y="476" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">1</text>
+<rect x="420" y="445" width="60" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="450.0" y="476" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">3</text>
+<rect x="590" y="445" width="60" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="620.0" y="476" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">5</text>
+<rect x="760" y="445" width="60" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="790.0" y="476" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">7</text>
+<text x="900" y="467" font-size="23" fill="#197568" font-weight="700" text-anchor="start" class="">0 проходов</text>
+<text x="900" y="499" font-size="19" fill="#197568" font-weight="400" text-anchor="start" class="">Длина каждой части — 1.</text>
+<rect x="40" y="555" width="1120" height="142" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="592" font-size="24" fill="#197568" font-weight="700" text-anchor="start" class="">На одной глубине части не пересекаются: сумма их длин ≤ n.</text>
+<text x="60" y="632" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="">Поэтому проходы всех вызовов этого уровня вместе требуют O(n) работы.</text>
+<text x="60" y="671" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Склеивание готовых частей тоже линейно по их суммарной длине.</text>
+</svg>

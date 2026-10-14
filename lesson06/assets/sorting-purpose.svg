@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="580" viewBox="0 0 1200 580" role="img">
+<title>Один набор участников — разные вопросы</title><desc>Сортировка меняет порядок записей. Поля внутри записи остаются вместе.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="580" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">Один набор участников — разные вопросы</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">Сортировка меняет порядок записей. Поля внутри записи остаются вместе.</text>
+<text x="40" y="145" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">Порядок регистрации</text>
+<rect x="40" y="170" width="320" height="58" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="207" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Вера</text>
+<text x="265" y="207" font-size="22" fill="#197568" font-weight="400" text-anchor="start" class="mono">80</text>
+<rect x="40" y="245" width="320" height="58" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="282" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Аня</text>
+<text x="265" y="282" font-size="22" fill="#197568" font-weight="400" text-anchor="start" class="mono">95</text>
+<rect x="40" y="320" width="320" height="58" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="357" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Борис</text>
+<text x="265" y="357" font-size="22" fill="#197568" font-weight="400" text-anchor="start" class="mono">80</text>
+<rect x="40" y="395" width="320" height="58" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="432" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Глеб</text>
+<text x="265" y="432" font-size="22" fill="#197568" font-weight="400" text-anchor="start" class="mono">90</text>
+<text x="440" y="145" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">Баллы по убыванию</text>
+<rect x="440" y="170" width="320" height="58" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="460" y="207" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Аня</text>
+<text x="665" y="207" font-size="22" fill="#197568" font-weight="400" text-anchor="start" class="mono">95</text>
+<rect x="440" y="245" width="320" height="58" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="460" y="282" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Глеб</text>
+<text x="665" y="282" font-size="22" fill="#197568" font-weight="400" text-anchor="start" class="mono">90</text>
+<rect x="440" y="320" width="320" height="58" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="460" y="357" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Вера</text>
+<text x="665" y="357" font-size="22" fill="#197568" font-weight="400" text-anchor="start" class="mono">80</text>
+<rect x="440" y="395" width="320" height="58" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="460" y="432" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Борис</text>
+<text x="665" y="432" font-size="22" fill="#197568" font-weight="400" text-anchor="start" class="mono">80</text>
+<text x="840" y="145" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">Имена по алфавиту</text>
+<rect x="840" y="170" width="320" height="58" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="860" y="207" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Аня</text>
+<text x="1065" y="207" font-size="22" fill="#197568" font-weight="400" text-anchor="start" class="mono">95</text>
+<rect x="840" y="245" width="320" height="58" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="860" y="282" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Борис</text>
+<text x="1065" y="282" font-size="22" fill="#197568" font-weight="400" text-anchor="start" class="mono">80</text>
+<rect x="840" y="320" width="320" height="58" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="860" y="357" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Вера</text>
+<text x="1065" y="357" font-size="22" fill="#197568" font-weight="400" text-anchor="start" class="mono">80</text>
+<rect x="840" y="395" width="320" height="58" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="860" y="432" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Глеб</text>
+<text x="1065" y="432" font-size="22" fill="#197568" font-weight="400" text-anchor="start" class="mono">90</text>
+<text x="40" y="540" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Рейтинг отвечает «кто набрал больше?», алфавит помогает найти имя.</text>
+</svg>

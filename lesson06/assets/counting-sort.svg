@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="625" viewBox="0 0 1200 625" role="img">
+<title>Сортировка подсчётом: сначала частоты</title><desc>Значения — целые числа от 0 до 3. Индекс счётчика обозначает само значение.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="625" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">Сортировка подсчётом: сначала частоты</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">Значения — целые числа от 0 до 3. Индекс счётчика обозначает само значение.</text>
+<text x="40" y="157" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">Вход</text>
+<rect x="245" y="125" width="64" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="277.0" y="156" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">3</text>
+<rect x="319" y="125" width="64" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="351.0" y="156" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">1</text>
+<rect x="393" y="125" width="64" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="425.0" y="156" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">3</text>
+<rect x="467" y="125" width="64" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="499.0" y="156" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">0</text>
+<rect x="541" y="125" width="64" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="573.0" y="156" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">2</text>
+<rect x="615" y="125" width="64" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="647.0" y="156" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">1</text>
+<path d="M465 180L465 230" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="475.0" y="197.0" font-size="18" fill="#2764b7" font-weight="400" text-anchor="start" class="">Посчитать каждое значение</text>
+<text x="40" y="280" font-size="21" fill="#2764b7" font-weight="400" text-anchor="start" class="">Значение / индекс</text>
+<text x="40" y="345" font-size="19" fill="#197568" font-weight="400" text-anchor="start" class="">Сколько раз встретилось</text>
+<text x="367" y="280" font-size="26" fill="#2764b7" font-weight="400" text-anchor="middle" class="mono">0</text>
+<rect x="335" y="305" width="64" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="367" y="341" font-size="26" fill="#203047" font-weight="400" text-anchor="middle" class="mono">1</text>
+<text x="367" y="395" font-size="19" fill="#203047" font-weight="400" text-anchor="middle" class="">1 шт.</text>
+<text x="522" y="280" font-size="26" fill="#2764b7" font-weight="400" text-anchor="middle" class="mono">1</text>
+<rect x="490" y="305" width="64" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="522" y="341" font-size="26" fill="#203047" font-weight="400" text-anchor="middle" class="mono">2</text>
+<text x="522" y="395" font-size="19" fill="#203047" font-weight="400" text-anchor="middle" class="">2 шт.</text>
+<text x="677" y="280" font-size="26" fill="#2764b7" font-weight="400" text-anchor="middle" class="mono">2</text>
+<rect x="645" y="305" width="64" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="677" y="341" font-size="26" fill="#203047" font-weight="400" text-anchor="middle" class="mono">1</text>
+<text x="677" y="395" font-size="19" fill="#203047" font-weight="400" text-anchor="middle" class="">1 шт.</text>
+<text x="832" y="280" font-size="26" fill="#2764b7" font-weight="400" text-anchor="middle" class="mono">3</text>
+<rect x="800" y="305" width="64" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="832" y="341" font-size="26" fill="#203047" font-weight="400" text-anchor="middle" class="mono">2</text>
+<text x="832" y="395" font-size="19" fill="#203047" font-weight="400" text-anchor="middle" class="">2 шт.</text>
+<path d="M570 414L570 465" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="580.0" y="431.5" font-size="18" fill="#2764b7" font-weight="400" text-anchor="start" class="">Выписать значения по частотам</text>
+<text x="40" y="521" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">Результат</text>
+<rect x="245" y="490" width="64" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="277.0" y="521" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">0</text>
+<rect x="319" y="490" width="64" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="351.0" y="521" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">1</text>
+<rect x="393" y="490" width="64" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="425.0" y="521" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">1</text>
+<rect x="467" y="490" width="64" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="499.0" y="521" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">2</text>
+<rect x="541" y="490" width="64" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="573.0" y="521" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">3</text>
+<rect x="615" y="490" width="64" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="647.0" y="521" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">3</text>
+<text x="40" y="590" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Два прохода по данным и проход по диапазону: O(n + k), здесь n = 6, k = 4.</text>
+</svg>

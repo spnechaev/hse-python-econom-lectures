@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img">
+<title>Цена подсчёта зависит от диапазона</title><desc>k = максимум − минимум + 1, если под каждое значение выделяется отдельный счётчик.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="500" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">Цена подсчёта зависит от диапазона</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">k = максимум − минимум + 1, если под каждое значение выделяется отдельный счётчик.</text>
+<rect x="40" y="140" width="540" height="174" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="58" y="174" font-size="21" fill="#197568" font-weight="700" text-anchor="start" class="">Баллы от 0 до 100</text>
+<text x="58" y="208" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">n = 1 000 000 записей</text>
+<text x="58" y="242" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">k = 101 счётчик</text>
+<text x="58" y="276" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Диапазон мал по сравнению с n.</text>
+<rect x="620" y="140" width="540" height="174" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="638" y="174" font-size="21" fill="#b66b13" font-weight="700" text-anchor="start" class="">[0, 1 000 000 000]</text>
+<text x="638" y="208" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">n = 2 значения</text>
+<text x="638" y="242" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">k = 1 000 000 001 счётчик</text>
+<text x="638" y="276" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Почти все счётчики будут нулевыми.</text>
+<text x="40" y="390" font-size="24" fill="#2764b7" font-weight="700" text-anchor="start" class="">Время O(n + k), дополнительная память O(k) для счётчиков.</text>
+<text x="40" y="439" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Мало элементов ещё не означает мало работы. Сначала оцените размер диапазона.</text>
+</svg>

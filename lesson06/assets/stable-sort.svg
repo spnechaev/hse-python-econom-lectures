@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img">
+<title>Стабильность: равные ключи сохраняют порядок</title><desc>Сортируем по баллам. Буквы A, B, C, D — идентификаторы записей, а не часть ключа.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="600" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">Стабильность: равные ключи сохраняют порядок</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">Сортируем по баллам. Буквы A, B, C, D — идентификаторы записей, а не часть ключа.</text>
+<text x="40" y="186" font-size="22" fill="#2764b7" font-weight="400" text-anchor="start" class="">Исходный порядок</text>
+<rect x="330" y="150" width="175" height="60" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="418" y="189" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="">A · 80</text>
+<rect x="535" y="150" width="175" height="60" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="623" y="189" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="">B · 95</text>
+<rect x="740" y="150" width="175" height="60" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="828" y="189" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="">C · 80</text>
+<rect x="945" y="150" width="175" height="60" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="1033" y="189" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="">D · 95</text>
+<text x="40" y="296" font-size="22" fill="#2764b7" font-weight="400" text-anchor="start" class="">По возрастанию</text>
+<rect x="330" y="260" width="175" height="60" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="418" y="299" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="">A · 80</text>
+<rect x="535" y="260" width="175" height="60" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="623" y="299" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="">C · 80</text>
+<rect x="740" y="260" width="175" height="60" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="828" y="299" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="">B · 95</text>
+<rect x="945" y="260" width="175" height="60" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="1033" y="299" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="">D · 95</text>
+<text x="40" y="406" font-size="22" fill="#2764b7" font-weight="400" text-anchor="start" class="mono">reverse=True</text>
+<rect x="330" y="370" width="175" height="60" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="418" y="409" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="">B · 95</text>
+<rect x="535" y="370" width="175" height="60" rx="10" fill="#dce8fa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="623" y="409" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="">D · 95</text>
+<rect x="740" y="370" width="175" height="60" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="828" y="409" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="">A · 80</text>
+<rect x="945" y="370" width="175" height="60" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="1033" y="409" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="">C · 80</text>
+<text x="40" y="520" font-size="24" fill="#197568" font-weight="700" text-anchor="start" class="">В обоих результатах A раньше C, а B раньше D.</text>
+<text x="40" y="560" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">reverse=True меняет направление сортировки, сохраняя порядок равных ключей.</text>
+</svg>

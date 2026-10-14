@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="550" viewBox="0 0 1200 550" role="img">
+<title>Слияние: два отсортированных потока</title><desc>Каждый раз забираем меньшую из двух голов. Готовый префикс больше не меняется.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="550" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">Слияние: два отсортированных потока</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">Каждый раз забираем меньшую из двух голов. Готовый префикс больше не меняется.</text>
+<text x="40" y="152" font-size="22" fill="#2764b7" font-weight="400" text-anchor="start" class="">Первый список</text>
+<rect x="280" y="120" width="64" height="46" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="312.0" y="151" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">1</text>
+<rect x="354" y="120" width="64" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="386.0" y="151" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">4</text>
+<rect x="428" y="120" width="64" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="460.0" y="151" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">7</text>
+<text x="40" y="232" font-size="22" fill="#2764b7" font-weight="400" text-anchor="start" class="">Второй список</text>
+<rect x="280" y="200" width="64" height="46" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="312.0" y="231" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">2</text>
+<rect x="354" y="200" width="64" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="386.0" y="231" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">4</text>
+<rect x="428" y="200" width="64" height="46" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="460.0" y="231" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">8</text>
+<text x="640" y="155" font-size="24" fill="#197568" font-weight="400" text-anchor="start" class="">1 &lt; 2 → берём 1</text>
+<text x="640" y="205" font-size="24" fill="#197568" font-weight="400" text-anchor="start" class="">Затем 2 &lt; 4 → берём 2</text>
+<text x="640" y="255" font-size="24" fill="#197568" font-weight="400" text-anchor="start" class="">Затем 4 = 4 → берём слева</text>
+<path d="M500 285L500 345" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="40" y="404" font-size="22" fill="#2764b7" font-weight="400" text-anchor="start" class="">Результат</text>
+<rect x="280" y="370" width="64" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="312.0" y="401" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">1</text>
+<rect x="354" y="370" width="64" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="386.0" y="401" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">2</text>
+<rect x="428" y="370" width="64" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="460.0" y="401" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">4</text>
+<rect x="502" y="370" width="64" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="534.0" y="401" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">4</text>
+<rect x="576" y="370" width="64" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="608.0" y="401" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">7</text>
+<rect x="650" y="370" width="64" height="46" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="682.0" y="401" font-size="24" fill="#203047" font-weight="400" text-anchor="middle" class="mono">8</text>
+<text x="40" y="499" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="">Каждый элемент переносится один раз: O(n + m) времени для длин n и m.</text>
+</svg>
