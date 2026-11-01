@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img">
+<title>От ключа к значению: ищем 3</title><desc>Хеш выбирает корзину. Совпадение ключей проверяем внутри неё.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="650" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">От ключа к значению: ищем 3</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">Хеш выбирает корзину. Совпадение ключей проверяем внутри неё.</text>
+<rect x="40" y="125" width="210" height="95" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="158" font-size="20" fill="#2764b7" font-weight="700" text-anchor="start" class="">Ключ</text>
+<text x="60" y="197" font-size="26" fill="#203047" font-weight="400" text-anchor="start" class="mono">3</text>
+<rect x="330" y="125" width="290" height="95" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="350" y="158" font-size="20" fill="#2764b7" font-weight="700" text-anchor="start" class="">Хеш</text>
+<text x="350" y="197" font-size="26" fill="#203047" font-weight="400" text-anchor="start" class="mono">hash(3) = 3</text>
+<rect x="700" y="125" width="460" height="95" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="720" y="158" font-size="20" fill="#2764b7" font-weight="700" text-anchor="start" class="">Номер корзины</text>
+<text x="720" y="197" font-size="26" fill="#203047" font-weight="400" text-anchor="start" class="mono">hash(3) % 2 = 1</text>
+<path d="M260 175L320 175" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M630 175L690 175" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="40" y="277" font-size="22" fill="#203047" font-weight="700" text-anchor="start" class="">Таблица: две независимые корзины</text>
+<text x="55" y="337" font-size="25" fill="#203047" font-weight="400" text-anchor="start" class="mono">0</text>
+<rect x="105" y="298" width="650" height="60" rx="10" fill="#edf0f5" stroke="#cdd7e4" stroke-width="2"/>
+<text x="130" y="337" font-size="25" fill="#203047" font-weight="400" text-anchor="start" class="mono">[]</text>
+<text x="800" y="337" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Не просматриваем</text>
+<text x="55" y="432" font-size="25" fill="#2764b7" font-weight="400" text-anchor="start" class="mono">1</text>
+<rect x="105" y="383" width="650" height="90" rx="10" fill="#e8effa" stroke="#2764b7" stroke-width="2"/>
+<rect x="125" y="400" width="290" height="55" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="145" y="436" font-size="24" fill="#b66b13" font-weight="400" text-anchor="start" class="mono">[1, &quot;one&quot;]</text>
+<rect x="440" y="400" width="290" height="55" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="460" y="436" font-size="24" fill="#197568" font-weight="400" text-anchor="start" class="mono">[3, &quot;three&quot;]</text>
+<path d="M1010 232L1010 385" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M1000 425L770 425" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="810" y="407" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">Корзина 1</text>
+<text x="125" y="510" font-size="21" fill="#b66b13" font-weight="400" text-anchor="start" class="">1 ≠ 3 → дальше</text>
+<text x="440" y="510" font-size="21" fill="#197568" font-weight="400" text-anchor="start" class="">3 == 3 → нашли</text>
+<rect x="40" y="550" width="1120" height="65" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="590" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="">Возвращаем &quot;three&quot;. Ключи 1 и 3 делят корзину, но остаются разными.</text>
+</svg>

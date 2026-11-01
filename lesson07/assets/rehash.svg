@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img">
+<title>Resize: заново распределяем пары по корзинам</title><desc>Ключи и значения сохраняются. Меняется делитель в hash(key) % capacity.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="720" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">Resize: заново распределяем пары по корзинам</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">Ключи и значения сохраняются. Меняется делитель в hash(key) % capacity.</text>
+<text x="40" y="145" font-size="24" fill="#b66b13" font-weight="700" text-anchor="start" class="">До: capacity = 2</text>
+<text x="760" y="145" font-size="24" fill="#197568" font-weight="700" text-anchor="start" class="">После: capacity = 8</text>
+<text x="45" y="207" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">0</text>
+<rect x="85" y="177" width="320" height="45" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="105" y="207" font-size="24" fill="#203047" font-weight="400" text-anchor="start" class="mono">[]</text>
+<text x="45" y="285" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">1</text>
+<rect x="85" y="245" width="320" height="240" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<rect x="103" y="265" width="284" height="50" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="120" y="298" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[1, &quot;one&quot;]</text>
+<rect x="103" y="335" width="284" height="50" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="120" y="368" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[3, &quot;three&quot;]</text>
+<rect x="103" y="405" width="284" height="50" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="120" y="438" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[5, &quot;five&quot;]</text>
+<text x="760" y="207" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">0</text>
+<rect x="805" y="177" width="350" height="44" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="825" y="207" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[]</text>
+<text x="760" y="259" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">1</text>
+<rect x="805" y="229" width="350" height="44" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="825" y="259" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[1, &quot;one&quot;]</text>
+<text x="760" y="311" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">2</text>
+<rect x="805" y="281" width="350" height="44" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="825" y="311" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[]</text>
+<text x="760" y="363" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">3</text>
+<rect x="805" y="333" width="350" height="44" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="825" y="363" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[3, &quot;three&quot;]</text>
+<text x="760" y="415" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">4</text>
+<rect x="805" y="385" width="350" height="44" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="825" y="415" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[]</text>
+<text x="760" y="467" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">5</text>
+<rect x="805" y="437" width="350" height="44" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="825" y="467" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[5, &quot;five&quot;]</text>
+<text x="760" y="519" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">6</text>
+<rect x="805" y="489" width="350" height="44" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="825" y="519" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[]</text>
+<text x="760" y="571" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">7</text>
+<rect x="805" y="541" width="350" height="44" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="825" y="571" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[]</text>
+<rect x="445" y="226" width="260" height="50" rx="10" fill="#e8effa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="575" y="259" font-size="20" fill="#203047" font-weight="400" text-anchor="middle" class="mono">hash(1) % 8 = 1</text>
+<path d="M715 251L745 251" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="445" y="330" width="260" height="50" rx="10" fill="#e8effa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="575" y="363" font-size="20" fill="#203047" font-weight="400" text-anchor="middle" class="mono">hash(3) % 8 = 3</text>
+<path d="M715 355L745 355" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="445" y="434" width="260" height="50" rx="10" fill="#e8effa" stroke="#cdd7e4" stroke-width="2"/>
+<text x="575" y="467" font-size="20" fill="#203047" font-weight="400" text-anchor="middle" class="mono">hash(5) % 8 = 5</text>
+<path d="M715 459L745 459" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="40" y="545" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Все три ключа имели</text>
+<text x="40" y="579" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">остаток 1 при делении на 2.</text>
+<rect x="40" y="620" width="1120" height="65" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="661" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="">Просто дописать корзины нельзя: поиск 3 теперь идёт в корзину 3, а не в 1.</text>
+</svg>

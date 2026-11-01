@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img">
+<title>Вставка: новая пара или новое значение?</title><desc>Сначала выбираем корзину, затем ищем ключ внутри неё. Здесь len(table) = 2.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="690" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">Вставка: новая пара или новое значение?</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">Сначала выбираем корзину, затем ищем ключ внутри неё. Здесь len(table) = 2.</text>
+<text x="40" y="140" font-size="23" fill="#2764b7" font-weight="700" text-anchor="start" class="">Одна исходная корзина, два независимых вызова</text>
+<rect x="40" y="165" width="1120" height="78" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="65" y="213" font-size="22" fill="#2764b7" font-weight="400" text-anchor="start" class="mono">table[1]</text>
+<text x="300" y="213" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[1, &quot;one&quot;]</text>
+<text x="665" y="213" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[3, &quot;three&quot;]</text>
+<path d="M300 250L300 290" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="40" y="300" width="535" height="270" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="340" font-size="22" fill="#2764b7" font-weight="400" text-anchor="start" class="mono">table_put(table, 5, &quot;five&quot;)</text>
+<path d="M885 250L885 290" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<rect x="625" y="300" width="535" height="270" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="645" y="340" font-size="22" fill="#2764b7" font-weight="400" text-anchor="start" class="mono">table_put(table, 3, &quot;THREE&quot;)</text>
+<text x="60" y="385" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Ключа 5 нет: добавляем пару в конец.</text>
+<text x="60" y="430" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">[1, &quot;one&quot;]  [3, &quot;three&quot;]</text>
+<rect x="60" y="450" width="220" height="52" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="80" y="485" font-size="23" fill="#197568" font-weight="400" text-anchor="start" class="mono">[5, &quot;five&quot;]</text>
+<text x="60" y="545" font-size="22" fill="#197568" font-weight="700" text-anchor="start" class="">return True — ключ добавлен</text>
+<text x="645" y="385" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">Ключ 3 найден: меняем только value.</text>
+<text x="645" y="430" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">[1, &quot;one&quot;]</text>
+<rect x="645" y="450" width="260" height="52" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="665" y="485" font-size="23" fill="#b66b13" font-weight="400" text-anchor="start" class="mono">[3, &quot;THREE&quot;]</text>
+<text x="645" y="545" font-size="22" fill="#b66b13" font-weight="700" text-anchor="start" class="">return False — ключ уже был</text>
+<text x="40" y="620" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="">Совпала корзина ≠ совпал ключ. Проверяем каждую пару до совпадения.</text>
+<text x="40" y="656" font-size="21" fill="#2764b7" font-weight="400" text-anchor="start" class="">Возвращаемый bool сообщает, появился ли новый ключ.</text>
+</svg>

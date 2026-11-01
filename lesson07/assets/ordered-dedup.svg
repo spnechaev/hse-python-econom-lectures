@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img">
+<title>Убираем повторы, сохраняем первые появления</title><desc>seen отвечает «уже встречали?». unique хранит результат в нужном порядке.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="840" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">Убираем повторы, сохраняем первые появления</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">seen отвечает «уже встречали?». unique хранит результат в нужном порядке.</text>
+<text x="40" y="140" font-size="23" fill="#2764b7" font-weight="700" text-anchor="start" class="">Вход:</text>
+<text x="150" y="140" font-size="25" fill="#203047" font-weight="400" text-anchor="start" class="mono">c-2 → c-1 → c-2 → c-3 → c-1</text>
+<text x="40" y="188" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">Старт: seen = set(); unique = []</text>
+<text x="60" y="240" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">Шаг</text>
+<text x="165" y="240" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">Ключ</text>
+<text x="300" y="240" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">В seen?</text>
+<text x="475" y="240" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">Действие</text>
+<text x="800" y="240" font-size="22" fill="#2764b7" font-weight="700" text-anchor="start" class="">unique после шага</text>
+<rect x="40" y="260" width="1120" height="57" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="296" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="">1</text>
+<text x="165" y="296" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">c-2</text>
+<text x="300" y="296" font-size="23" fill="#197568" font-weight="400" text-anchor="start" class="">нет</text>
+<text x="475" y="296" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">в seen и в unique</text>
+<text x="800" y="296" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">[c-2]</text>
+<rect x="40" y="330" width="1120" height="57" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="366" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="">2</text>
+<text x="165" y="366" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">c-1</text>
+<text x="300" y="366" font-size="23" fill="#197568" font-weight="400" text-anchor="start" class="">нет</text>
+<text x="475" y="366" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">в seen и в unique</text>
+<text x="800" y="366" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">[c-2, c-1]</text>
+<rect x="40" y="400" width="1120" height="57" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="436" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="">3</text>
+<text x="165" y="436" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">c-2</text>
+<text x="300" y="436" font-size="23" fill="#b66b13" font-weight="400" text-anchor="start" class="">да</text>
+<text x="475" y="436" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">пропускаем</text>
+<text x="800" y="436" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">[c-2, c-1]</text>
+<rect x="40" y="470" width="1120" height="57" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="506" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="">4</text>
+<text x="165" y="506" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">c-3</text>
+<text x="300" y="506" font-size="23" fill="#197568" font-weight="400" text-anchor="start" class="">нет</text>
+<text x="475" y="506" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">в seen и в unique</text>
+<text x="800" y="506" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">[c-2, c-1, c-3]</text>
+<rect x="40" y="540" width="1120" height="57" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="576" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="">5</text>
+<text x="165" y="576" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">c-1</text>
+<text x="300" y="576" font-size="23" fill="#b66b13" font-weight="400" text-anchor="start" class="">да</text>
+<text x="475" y="576" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="">пропускаем</text>
+<text x="800" y="576" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">[c-2, c-1, c-3]</text>
+<rect x="40" y="640" width="535" height="150" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="676" font-size="23" fill="#2764b7" font-weight="700" text-anchor="start" class="">seen: множество</text>
+<text x="60" y="716" font-size="24" fill="#203047" font-weight="400" text-anchor="start" class="mono">{c-1, c-2, c-3}</text>
+<text x="60" y="756" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Порядок элементов не гарантирован.</text>
+<rect x="605" y="640" width="555" height="150" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="625" y="676" font-size="23" fill="#197568" font-weight="700" text-anchor="start" class="">unique: список</text>
+<text x="625" y="716" font-size="24" fill="#203047" font-weight="400" text-anchor="start" class="mono">[c-2, c-1, c-3]</text>
+<text x="625" y="756" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Порядок задаёт добавление в список.</text>
+</svg>

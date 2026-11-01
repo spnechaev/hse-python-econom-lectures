@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img">
+<title>Удаление: убираем пару из списка</title><desc>Отдельный пример: удаляем ключ 3 из корзины с ключами 1, 3, 5.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#63768b"/></marker></defs>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif}.mono{font-family:Menlo,DejaVu Sans Mono,monospace}</style>
+<rect width="1200" height="660" rx="20" fill="#f5f7fb"/>
+<text x="40" y="52" font-size="30" fill="#203047" font-weight="700" text-anchor="start" class="">Удаление: убираем пару из списка</text>
+<text x="40" y="88" font-size="20" fill="#203047" font-weight="400" text-anchor="start" class="">Отдельный пример: удаляем ключ 3 из корзины с ключами 1, 3, 5.</text>
+<text x="40" y="145" font-size="24" fill="#2764b7" font-weight="700" text-anchor="start" class="mono">table_delete(table, 3)</text>
+<text x="40" y="215" font-size="24" fill="#203047" font-weight="700" text-anchor="start" class="">До</text>
+<text x="350" y="190" font-size="20" fill="#2764b7" font-weight="400" text-anchor="middle" class="mono">index = 0</text>
+<rect x="220" y="205" width="270" height="64" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="355" y="246" font-size="23" fill="#203047" font-weight="400" text-anchor="middle" class="mono">[1, &quot;one&quot;]</text>
+<text x="660" y="190" font-size="20" fill="#2764b7" font-weight="400" text-anchor="middle" class="mono">index = 1</text>
+<rect x="530" y="205" width="270" height="64" rx="10" fill="#fff0d8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="665" y="246" font-size="23" fill="#203047" font-weight="400" text-anchor="middle" class="mono">[3, &quot;three&quot;]</text>
+<text x="970" y="190" font-size="20" fill="#2764b7" font-weight="400" text-anchor="middle" class="mono">index = 2</text>
+<rect x="840" y="205" width="270" height="64" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
+<text x="975" y="246" font-size="23" fill="#203047" font-weight="400" text-anchor="middle" class="mono">[5, &quot;five&quot;]</text>
+<text x="220" y="312" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Ключ 1 не подходит.</text>
+<text x="530" y="312" font-size="21" fill="#b66b13" font-weight="400" text-anchor="start" class="">Ключ 3 найден.</text>
+<text x="530" y="350" font-size="23" fill="#b66b13" font-weight="400" text-anchor="start" class="mono">del bucket[1]</text>
+<path d="M975 280L665 395" fill="none" stroke="#63768b" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="870" y="355" font-size="20" fill="#2764b7" font-weight="400" text-anchor="start" class="">Сдвиг на место 1</text>
+<text x="40" y="448" font-size="24" fill="#203047" font-weight="700" text-anchor="start" class="">После</text>
+<rect x="220" y="410" width="270" height="64" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="355" y="451" font-size="23" fill="#203047" font-weight="400" text-anchor="middle" class="mono">[1, &quot;one&quot;]</text>
+<text x="355" y="509" font-size="20" fill="#197568" font-weight="400" text-anchor="middle" class="mono">index = 0</text>
+<rect x="530" y="410" width="270" height="64" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="665" y="451" font-size="23" fill="#203047" font-weight="400" text-anchor="middle" class="mono">[5, &quot;five&quot;]</text>
+<text x="665" y="509" font-size="20" fill="#197568" font-weight="400" text-anchor="middle" class="mono">index = 1</text>
+<rect x="40" y="545" width="1120" height="78" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
+<text x="60" y="577" font-size="22" fill="#197568" font-weight="700" text-anchor="start" class="">Первый вызов возвращает True: пара удалена.</text>
+<text x="60" y="608" font-size="21" fill="#203047" font-weight="400" text-anchor="start" class="">Повторный вызов с ключом 3 вернёт False: такого ключа уже нет.</text>
+</svg>
