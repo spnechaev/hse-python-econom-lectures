@@ -27,6 +27,7 @@ def swap_digits(number: int, first: int, second: int) -> int:
 
 ```python
 assert swap_digits(120203, 2, 3) == 130302
+assert swap_digits(1200, 1, 2) == 2100
 assert swap_digits(1002, 1, 0) == 112
 assert swap_digits(505, 5, 0) == 50
 assert swap_digits(123, 2, 2) == 123

@@ -15,9 +15,9 @@
 <rect x="103" y="265" width="284" height="50" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
 <text x="120" y="298" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[1, &quot;one&quot;]</text>
 <rect x="103" y="335" width="284" height="50" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
-<text x="120" y="368" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[3, &quot;three&quot;]</text>
+<text x="120" y="368" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[5, &quot;five&quot;]</text>
 <rect x="103" y="405" width="284" height="50" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
-<text x="120" y="438" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[5, &quot;five&quot;]</text>
+<text x="120" y="438" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[3, &quot;THREE&quot;]</text>
 <text x="760" y="207" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">0</text>
 <rect x="805" y="177" width="350" height="44" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
 <text x="825" y="207" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[]</text>
@@ -29,7 +29,7 @@
 <text x="825" y="311" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[]</text>
 <text x="760" y="363" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">3</text>
 <rect x="805" y="333" width="350" height="44" rx="10" fill="#dbf0e8" stroke="#cdd7e4" stroke-width="2"/>
-<text x="825" y="363" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[3, &quot;three&quot;]</text>
+<text x="825" y="363" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[3, &quot;THREE&quot;]</text>
 <text x="760" y="415" font-size="22" fill="#203047" font-weight="400" text-anchor="start" class="mono">4</text>
 <rect x="805" y="385" width="350" height="44" rx="10" fill="#ffffff" stroke="#cdd7e4" stroke-width="2"/>
 <text x="825" y="415" font-size="23" fill="#203047" font-weight="400" text-anchor="start" class="mono">[]</text>

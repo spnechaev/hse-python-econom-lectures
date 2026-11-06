@@ -27,6 +27,7 @@ def replace_digit(number: int, old: int, new: int) -> int:
 
 ```python
 assert replace_digit(120203, 2, 7) == 170703
+assert replace_digit(1200, 1, 3) == 3200
 assert replace_digit(505, 5, 0) == 0
 assert replace_digit(1002, 0, 3) == 1332
 assert replace_digit(123, 8, 4) == 123

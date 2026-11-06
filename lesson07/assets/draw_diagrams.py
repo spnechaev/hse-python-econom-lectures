@@ -160,7 +160,7 @@ def rehash(Diagram):
     d.text(105, 207, '[]', 24, mono=True)
     d.text(45, 285, '1', 23, mono=True)
     d.box(85, 245, 320, 240, '#fff0d8')
-    for index, value in enumerate(['[1, "one"]', '[3, "three"]', '[5, "five"]']):
+    for index, value in enumerate(['[1, "one"]', '[5, "five"]', '[3, "THREE"]']):
         y = 265 + index * 70
         d.box(103, y, 284, 50)
         d.text(120, y + 33, value, 23, mono=True)
@@ -168,7 +168,7 @@ def rehash(Diagram):
         y = 177 + index * 52
         d.text(760, y + 30, str(index), 22, mono=True)
         d.box(805, y, 350, 44, '#dbf0e8' if index in (1, 3, 5) else '#ffffff')
-        values = {1: '[1, "one"]', 3: '[3, "three"]', 5: '[5, "five"]'}
+        values = {1: '[1, "one"]', 3: '[3, "THREE"]', 5: '[5, "five"]'}
         d.text(825, y + 30, values.get(index, '[]'), 23, mono=True)
     for key, y in [(1, 251), (3, 355), (5, 459)]:
         d.box(445, y - 25, 260, 50, '#e8effa')
@@ -182,36 +182,36 @@ def rehash(Diagram):
 
 
 def put_update(Diagram):
-    d = Diagram('Вставка: новая пара или новое значение?', 'Сначала выбираем корзину, затем ищем ключ внутри неё. Здесь len(table) = 2.', 690)
-    d.text(40, 140, 'Одна исходная корзина, два независимых вызова', 23, color=BLUE, bold=True)
-    d.box(40, 165, 1120, 78)
-    d.text(65, 213, 'table[1]', 22, mono=True, color=BLUE)
-    d.text(300, 213, '[1, "one"]', 23, mono=True)
-    d.text(665, 213, '[3, "three"]', 23, mono=True)
-    for x, title in [(40, 'table_put(table, 5, "five")'), (625, 'table_put(table, 3, "THREE")')]:
-        d.arrow(x + 260, 250, x + 260, 290)
-        d.box(x, 300, 535, 270)
-        d.text(x + 20, 340, title, 22, color=BLUE, mono=True)
-    d.text(60, 385, 'Ключа 5 нет: добавляем пару в конец.', 22)
-    d.text(60, 430, '[1, "one"]  [3, "three"]', 22, mono=True)
-    d.box(60, 450, 220, 52, '#dbf0e8')
-    d.text(80, 485, '[5, "five"]', 23, mono=True, color=GREEN)
-    d.text(60, 545, 'return True — ключ добавлен', 22, color=GREEN, bold=True)
-    d.text(645, 385, 'Ключ 3 найден: меняем только value.', 22)
-    d.text(645, 430, '[1, "one"]', 22, mono=True)
-    d.box(645, 450, 260, 52, '#fff0d8')
-    d.text(665, 485, '[3, "THREE"]', 23, mono=True, color=ORANGE)
-    d.text(645, 545, 'return False — ключ уже был', 22, color=ORANGE, bold=True)
-    d.text(40, 620, 'Совпала корзина ≠ совпал ключ. Проверяем каждую пару до совпадения.', 23)
-    d.text(40, 656, 'Возвращаемый bool сообщает, появился ли новый ключ.', 21, color=BLUE)
+    d = Diagram('Вставка: новая пара или новое значение?',
+                'Два последовательных вызова на одной таблице. Здесь len(table) = 2.', 740)
+    states = [
+        (140, 'До вызовов', ['[1, "one"]', '[3, "three"]'], None),
+        (315, '1. table_put(table, 5, "five") → True',
+         ['[1, "one"]', '[3, "three"]', '[5, "five"]'], 2),
+        (490, '2. table_put(table, 3, "THREE") → False',
+         ['[1, "one"]', '[3, "THREE"]', '[5, "five"]'], 1),
+    ]
+    for y, title, pairs, changed in states:
+        d.text(40, y, title, 23, color=BLUE, bold=True, mono=y != 140)
+        d.box(40, y + 20, 1120, 90)
+        d.text(60, y + 75, 'table[1]', 22, mono=True, color=BLUE)
+        for index, value in enumerate(pairs):
+            x = 240 + index * 300
+            fill = '#dbf0e8' if index == changed and y == 315 else '#fff0d8' if index == changed else '#ffffff'
+            d.box(x, y + 38, 270, 54, fill)
+            d.text(x + 18, y + 74, value, 23, mono=True)
+    d.arrow(1090, 260, 1090, 290)
+    d.arrow(1090, 435, 1090, 465)
+    d.text(40, 650, 'Ключ 5 добавлен: пар стало три. При замене значения ключа 3 их осталось три.', 23)
+    d.text(40, 695, 'Совпала корзина ≠ совпал ключ. Возвращаемый bool сообщает о новом ключе.', 22, color=BLUE)
     d.save('put-update.svg')
 
 
 def delete_pair(Diagram):
-    d = Diagram('Удаление: убираем пару из списка', 'Отдельный пример: удаляем ключ 3 из корзины с ключами 1, 3, 5.', 660)
+    d = Diagram('Удаление: убираем пару из списка', 'Продолжаем тот же пример: удаляем ключ 3 после замены его значения.', 660)
     d.text(40, 145, 'table_delete(table, 3)', 24, mono=True, color=BLUE, bold=True)
     d.text(40, 215, 'До', 24, bold=True)
-    for x, idx, value in [(220, 0, '[1, "one"]'), (530, 1, '[3, "three"]'), (840, 2, '[5, "five"]')]:
+    for x, idx, value in [(220, 0, '[1, "one"]'), (530, 1, '[3, "THREE"]'), (840, 2, '[5, "five"]')]:
         d.text(x + 130, 190, 'index = ' + str(idx), 20, anchor='middle', color=BLUE, mono=True)
         d.box(x, 205, 270, 64, '#fff0d8' if idx == 1 else '#ffffff')
         d.text(x + 135, 246, value, 23, anchor='middle', mono=True)
