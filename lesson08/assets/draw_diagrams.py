@@ -108,7 +108,48 @@ def main():
     body += box(300, 520, 500, 95, "Действие выхода: закрыть файл", "Затем продолжить выбранный путь", fill="#eef3fb")
     body += text(550, 665, "Файловый менеджер не подавляет ошибку и не отменяет сделанную запись.", size=22, anchor="middle")
     save("file-lifetime.svg", "Время жизни файла в with", "После успешного входа файл открыт в теле блока; конец блока, return и исключение вызывают закрытие. Ошибка продолжает распространяться.", body, 705)
-    print("Созданы 4 SVG-схемы")
+    body = text(40, 48, "else: работа только после успешного try", size=30, weight="600")
+    body += text(295, 108, "try завершился без ошибки", size=24, anchor="middle", weight="600", fill=GREEN)
+    body += text(805, 108, "В try возник ValueError", size=24, anchor="middle", weight="600", fill=RED)
+    left = [
+        ("try", "quantity = int(text)", "#edf7f1", GREEN),
+        ("except пропущен", "Обрабатывать нечего", "#f1f1ef", "#8d939c"),
+        ("else выполняется", "Сохраняем корректный результат", "#edf7f1", GREEN),
+        ("Код после конструкции", "Продолжаем работу", "#eef3fb", BLUE),
+    ]
+    right = [
+        ("try прерван", "int(text) не вернул число", "#fcefeb", RED),
+        ("except ValueError", "Сообщили об ошибке; закончили", "#eef3fb", BLUE),
+        ("else пропущен", "Успешного результата нет", "#f1f1ef", "#8d939c"),
+        ("Код после конструкции", "Ошибка обработана, идём дальше", "#eef3fb", BLUE),
+    ]
+    for x, steps in [(60, left), (570, right)]:
+        for index, (label, detail, fill, stroke) in enumerate(steps):
+            y = 145 + 135 * index
+            body += box(x, y, 470, 95, label, detail, fill=fill, stroke=stroke)
+            if index < 3:
+                body += arrow(x + 235, y + 95, x + 235, y + 130)
+    body += text(550, 706, "return, break и continue внутри try тоже пропускают else.", size=22, anchor="middle")
+    save("try-else-flow.svg", "Когда выполняется else", "Два пути: после обычного завершения try выполняется else, а except пропускается. После ValueError выполняется обработчик, а else пропускается. Если обработчик завершился обычным образом, оба пути доходят до кода после конструкции. Выход из try через return, break или continue пропускает else.", body, 745)
+
+    body = text(40, 48, "Что происходит после входа в except", size=30, weight="600")
+    body += text(295, 108, "Обработчик завершился", size=24, anchor="middle", weight="600", fill=GREEN)
+    body += text(805, 108, "Обработчик сам выбросил ошибку", size=24, anchor="middle", weight="600", fill=RED)
+    for x in (60, 570):
+        body += box(x, 145, 470, 95, "В try возник ValueError", "Остаток try не выполняется", fill="#fcefeb", stroke=RED)
+        body += arrow(x + 235, 240, x + 235, 290, color=RED)
+    body += box(60, 295, 470, 130, "except ValueError:", '    print("Ошибка ввода")', fill="#edf7f1", stroke=GREEN)
+    body += text(82, 400, "Конец обработчика, новой ошибки нет", size=21, fill=GREEN)
+    body += box(570, 295, 470, 130, "except ValueError:", '    raise RuntimeError("Импорт прерван")', fill="#fcefeb", stroke=RED)
+    body += text(592, 400, "Появилось новое исключение", size=21, fill=RED)
+    body += arrow(295, 425, 295, 490, color=GREEN)
+    body += arrow(805, 425, 805, 490, color=RED)
+    body += box(60, 495, 470, 95, "Код после конструкции", "Выполняется", fill="#edf7f1", stroke=GREEN)
+    body += box(570, 495, 470, 95, "Поиск внешнего обработчика", "Код после конструкции пропущен", fill="#fcefeb", stroke=RED)
+    body += text(550, 645, "Соседний except RuntimeError этой же конструкции не сработает:", size=23, anchor="middle")
+    body += text(550, 681, "он ловит ошибки из try, а не из другого except.", size=23, anchor="middle")
+    save("handler-exception-flow.svg", "Обработчик с новым исключением и без него", "После ValueError обработчик может закончиться обычным образом, и тогда выполняется код после конструкции. Если в обработчике возникает RuntimeError, код после конструкции пропускается и Python ищет внешний обработчик. Соседний except RuntimeError той же конструкции новое исключение не ловит.", body, 720)
+    print("Созданы 6 SVG-схем")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "audit": {
+    "raw_rows": 117,
+    "exact_duplicate_rows": 3,
+    "rows_after_exact_dedup": 114,
+    "conflict_rows": 2,
+    "invalid_rows": 6,
+    "rejected_rows": 8,
+    "valid_rows": 106,
+    "cancelled_rows": 6,
+    "financial_rows": 100
+  },
+  "exact_duplicate_source_rows": [
+    108,
+    109,
+    110
+  ],
+  "rejected": [
+    {
+      "source_row": 111,
+      "event_id": "009000",
+      "reason": "conflicting_event_id"
+    },
+    {
+      "source_row": 112,
+      "event_id": "009000",
+      "reason": "conflicting_event_id"
+    },
+    {
+      "source_row": 113,
+      "event_id": "009101",
+      "reason": "invalid_date"
+    },
+    {
+      "source_row": 114,
+      "event_id": "009102",
+      "reason": "invalid_units"
+    },
+    {
+      "source_row": 115,
+      "event_id": "009103",
+      "reason": "invalid_units"
+    },
+    {
+      "source_row": 116,
+      "event_id": "009104",
+      "reason": "unknown_product"
+    },
+    {
+      "source_row": 117,
+      "event_id": "009105",
+      "reason": "invalid_price"
+    },
+    {
+      "source_row": 118,
+      "event_id": "009106",
+      "reason": "invalid_event"
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2026-01",
+      "units": 64,
+      "revenue_kopecks": 7530000,
+      "cogs_kopecks": 4344000,
+      "gross_margin_kopecks": 3186000,
+      "ad_spend_kopecks": 1100000,
+      "after_ads_kopecks": 2086000
+    },
+    {
+      "month": "2026-02",
+      "units": 135,
+      "revenue_kopecks": 8490000,
+      "cogs_kopecks": 5766000,
+      "gross_margin_kopecks": 2724000,
+      "ad_spend_kopecks": 2200000,
+      "after_ads_kopecks": 524000
+    }
+  ],
+  "by_month_channel": [
+    {
+      "month": "2026-01",
+      "channel": "поиск",
+      "units": 19,
+      "revenue_kopecks": 4560000,
+      "cogs_kopecks": 2850000,
+      "gross_margin_kopecks": 1710000,
+      "ad_spend_kopecks": 800000,
+      "after_ads_kopecks": 910000
+    },
+    {
+      "month": "2026-01",
+      "channel": "прямой",
+      "units": 27,
+      "revenue_kopecks": 810000,
+      "cogs_kopecks": 324000,
+      "gross_margin_kopecks": 486000,
+      "ad_spend_kopecks": 0,
+      "after_ads_kopecks": 486000
+    },
+    {
+      "month": "2026-01",
+      "channel": "соцсети",
+      "units": 18,
+      "revenue_kopecks": 2160000,
+      "cogs_kopecks": 1170000,
+      "gross_margin_kopecks": 990000,
+      "ad_spend_kopecks": 300000,
+      "after_ads_kopecks": 690000
+    },
+    {
+      "month": "2026-02",
+      "channel": "поиск",
+      "units": 107,
+      "revenue_kopecks": 7680000,
+      "cogs_kopecks": 5430000,
+      "gross_margin_kopecks": 2250000,
+      "ad_spend_kopecks": 1800000,
+      "after_ads_kopecks": 450000
+    },
+    {
+      "month": "2026-02",
+      "channel": "прямой",
+      "units": 28,
+      "revenue_kopecks": 810000,
+      "cogs_kopecks": 336000,
+      "gross_margin_kopecks": 474000,
+      "ad_spend_kopecks": 0,
+      "after_ads_kopecks": 474000
+    },
+    {
+      "month": "2026-02",
+      "channel": "соцсети",
+      "units": 0,
+      "revenue_kopecks": 0,
+      "cogs_kopecks": 0,
+      "gross_margin_kopecks": 0,
+      "ad_spend_kopecks": 400000,
+      "after_ads_kopecks": -400000
+    }
+  ],
+  "by_month_product": [
+    {
+      "month": "2026-01",
+      "product_id": "001",
+      "units": 19,
+      "revenue_kopecks": 4560000,
+      "cogs_kopecks": 2850000,
+      "gross_margin_kopecks": 1710000
+    },
+    {
+      "month": "2026-01",
+      "product_id": "003",
+      "units": 18,
+      "revenue_kopecks": 2160000,
+      "cogs_kopecks": 1170000,
+      "gross_margin_kopecks": 990000
+    },
+    {
+      "month": "2026-01",
+      "product_id": "004",
+      "units": 27,
+      "revenue_kopecks": 810000,
+      "cogs_kopecks": 324000,
+      "gross_margin_kopecks": 486000
+    },
+    {
+      "month": "2026-02",
+      "product_id": "001",
+      "units": 17,
+      "revenue_kopecks": 4080000,
+      "cogs_kopecks": 2550000,
+      "gross_margin_kopecks": 1530000
+    },
+    {
+      "month": "2026-02",
+      "product_id": "002",
+      "units": 90,
+      "revenue_kopecks": 3600000,
+      "cogs_kopecks": 2880000,
+      "gross_margin_kopecks": 720000
+    },
+    {
+      "month": "2026-02",
+      "product_id": "004",
+      "units": 28,
+      "revenue_kopecks": 810000,
+      "cogs_kopecks": 336000,
+      "gross_margin_kopecks": 474000
+    }
+  ],
+  "weighted_sale_unit_price_by_month": [
+    {
+      "month": "2026-01",
+      "sale_rows": 40,
+      "sale_units": 70,
+      "sale_revenue_kopecks": 8100000,
+      "mean_row_price_kopecks": 157500.0,
+      "weighted_unit_price_kopecks": 115714.28571428571,
+      "sale_orders": 20
+    },
+    {
+      "month": "2026-02",
+      "sale_rows": 51,
+      "sale_units": 151,
+      "sale_revenue_kopecks": 9700000,
+      "mean_row_price_kopecks": 115686.27450980392,
+      "weighted_unit_price_kopecks": 64238.41059602649,
+      "sale_orders": 30
+    }
+  ]
+}
