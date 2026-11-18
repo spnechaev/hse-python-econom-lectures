@@ -84,21 +84,37 @@ def main():
     body += text(550, 570, "Внешний вызов закончился, доступ к нужной привязке сохранился.", size=23, anchor="middle")
     save("closure-state.svg", "Независимое состояние замыканий", "Два вызова фабрики создают отдельные переменные current и возвращают отдельные функции next_value. nonlocal каждой функции меняет только свою внешнюю переменную.", body, 610)
 
-    body = text(40, 48, "Создать обёртку и вызвать её — разные действия", size=30, weight="600")
-    body += text(50, 105, "При декорировании", size=24, weight="600")
-    body += box(50, 135, 300, 100, "func", "Исходная функция")
-    body += box(405, 135, 300, 100, "trace(func)", "Создаёт wrapper")
-    body += box(760, 135, 290, 100, "wrapper", "Сохраняет доступ к func", color=GREEN, fill="#edf7f1")
-    body += arrow(350, 185, 400, 185)
-    body += arrow(705, 185, 755, 185)
-    body += text(50, 325, "При каждом вызове готовой функции", size=24, weight="600")
-    body += box(50, 355, 300, 100, "Вход в wrapper", "Общее действие до func")
-    body += box(405, 355, 300, 100, "func(*args, **kwargs)", "Исходная работа")
-    body += box(760, 355, 290, 100, "Выход из wrapper", "Результат или исключение", color=GREEN, fill="#edf7f1")
-    body += arrow(350, 405, 400, 405)
-    body += arrow(705, 405, 755, 405)
-    body += text(550, 525, "Нужны return для результата и отдельное решение о завершающих действиях.", size=22, anchor="middle")
-    save("decorator-flow.svg", "Создание и вызов обёртки", "При декорировании trace получает исходную функцию и возвращает wrapper. При вызове wrapper выполняет общую работу, вызывает сохранённую функцию и передаёт результат или исключение дальше.", body, 570)
+    body = text(40, 48, "Куда ведут два имени парсера", size=30, weight="600")
+    body += text(50, 105, "После original_parser = parse_quantity", size=24, weight="600")
+    body += text(65, 158, "original_parser")
+    body += text(65, 211, "parse_quantity")
+    body += box(745, 125, 305, 105, "Исходный парсер", "int(text, base)")
+    body += arrow(245, 151, 740, 151)
+    body += arrow(245, 204, 740, 204)
+
+    body += text(50, 294, "После parse_quantity = trace(parse_quantity)", size=24, weight="600")
+    body += text(65, 350, "original_parser")
+    body += text(65, 422, "parse_quantity")
+    body += box(355, 370, 235, 90, "wrapper", "Обёртка с журналом", color=GREEN, fill="#edf7f1")
+    body += box(745, 320, 305, 120, "Исходный парсер", "int(text, base)")
+    body += arrow(245, 343, 740, 343)
+    body += arrow(245, 415, 350, 415)
+    body += arrow(590, 415, 740, 415)
+    body += text(665, 400, "func", size=20, anchor="middle")
+
+    body += text(50, 530, 'При вызове parse_quantity("7")', size=24, weight="600")
+    body += box(50, 555, 300, 90, "Вход в wrapper", "Печатает «Начало вызова»")
+    body += box(405, 555, 300, 90, 'func("7")', "Парсер возвращает 7")
+    body += box(760, 555, 290, 90, "Блок finally", "Печатает «Конец вызова»")
+    body += arrow(350, 600, 400, 600)
+    body += arrow(705, 600, 755, 600)
+    save(
+        "decorator-flow.svg", "Имена парсера до и после декорирования",
+        "Сначала оба имени указывают на исходный парсер. После присваивания результата trace "
+        "имя parse_quantity ведёт к обёртке, а original_parser по-прежнему ведёт к парсеру. "
+        "Обёртка вызывает тот же парсер через func и печатает начало и конец вызова.",
+        body, 670,
+    )
 
     body = text(40, 48, "Декоратор с параметром: три разных вызова", size=30, weight="600")
     rows = [
